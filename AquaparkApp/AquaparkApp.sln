@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp", "AquaparkApp\AquaparkApp.csproj", "{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp.Client", "AquaparkApp.Client\AquaparkApp.Client.csproj", "{CE76802E-9171-4CA2-A896-1207D481C424}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE76802E-9171-4CA2-A896-1207D481C424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE76802E-9171-4CA2-A896-1207D481C424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE76802E-9171-4CA2-A896-1207D481C424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE76802E-9171-4CA2-A896-1207D481C424}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
