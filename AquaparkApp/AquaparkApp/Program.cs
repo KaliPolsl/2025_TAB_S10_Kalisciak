@@ -1,5 +1,6 @@
 using AquaparkApp.Client.Pages;
 using AquaparkApp.Components;
+//using AquaparkApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+
+
+builder.Services.AddScoped<UserService>();
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
 
 var app = builder.Build();
 

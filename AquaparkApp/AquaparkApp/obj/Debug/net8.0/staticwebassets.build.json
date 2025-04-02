@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IZTLXqXJlwgRkx+/sXU96Rg5Fqo+sGK/TDh9fPgE18I=",
+  "Hash": "PVrwZHZsuyF26gK69xSM6uvyIFizRGM1wVCMNYxb2Xk=",
   "Source": "AquaparkApp",
   "BasePath": "_content/AquaparkApp",
   "Mode": "Default",
@@ -155,8 +155,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "vessd5fs0w",
-      "Integrity": "KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A=",
+      "Fingerprint": "zcxece3e9m",
+      "Integrity": "Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb"
@@ -176,8 +176,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "bahpm83yu3",
-      "Integrity": "PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM=",
+      "Fingerprint": "glmkrg55h6",
+      "Integrity": "nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AquaparkApp.Client.wasm"
@@ -197,8 +197,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "ilpobzmp19",
-      "Integrity": "anELJjG6aUG34D5hCevMW8XOXQP2SYyw2V6g0qlIt3U=",
+      "Fingerprint": "wu03tdo4bc",
+      "Integrity": "6Mdu5I2/feTqJtS8wXY7uQZ2baoTtfBW2WgwlJrkRwA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -4992,7 +4992,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\4npcr3xzo0-gmkxofgq6z.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-bahpm83yu3.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-glmkrg55h6.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -5006,11 +5006,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AquaparkApp.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "bmd8wmassf",
-      "Integrity": "DTGuy5UDqlDHd3rlJE2nxYY4mZp1LHIfWPdGJD9+xxQ=",
+      "Fingerprint": "7w1ffszmeq",
+      "Integrity": "V8ZDFO1IoLhf/NguNt9myBBKYrrniO1/ise9143ohG8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-bahpm83yu3.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-glmkrg55h6.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5bg3tpgyei-jt8xzja2dj.gz",
@@ -6483,7 +6483,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\g9k3mp6ru9-dgkgnxso4m.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-vessd5fs0w.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-zcxece3e9m.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -6497,11 +6497,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "874s2as4f8",
-      "Integrity": "vJGA61YN0waskZs+XJh2TTAU1nvExj37nt0CfdqaJE8=",
+      "Fingerprint": "twekwslabr",
+      "Integrity": "fWhuGP474QsRelpKmJQrshdKmQu6kxwDSffmjGob9GI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-vessd5fs0w.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-zcxece3e9m.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\ghu2fuzrh2-akyqtilzco.gz",
@@ -8121,7 +8121,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\sy94sqd1pv-033xejool8.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-ilpobzmp19.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-wu03tdo4bc.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -8135,11 +8135,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nr8bn8l1ta",
-      "Integrity": "3dfVYtw4/UGkJe6UhIjn5NPgt7RmiPDeaXnMDlng8iQ=",
+      "Fingerprint": "bm1czm96ig",
+      "Integrity": "M76yBIkcwdsl+FKU8PU3IbKYaQCVKhYKbfgXAZJwEBg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-ilpobzmp19.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-wu03tdo4bc.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t82x6s7ml8-xqsu2wsvba.gz",
@@ -9345,7 +9345,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15604"
+          "Value": "18928"
         },
         {
           "Name": "Content-Type",
@@ -9353,28 +9353,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A=\""
+          "Value": "\"Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
+          "Value": "Wed, 02 Apr 2025 19:53:00 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A="
+          "Value": "sha256-Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-vessd5fs0w.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-zcxece3e9m.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000079968013"
+          "Quality": "0.000102933608"
         }
       ],
       "ResponseHeaders": [
@@ -9392,15 +9392,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12504"
+          "Value": "9714"
         },
         {
           "Name": "ETag",
-          "Value": "\"vJGA61YN0waskZs+XJh2TTAU1nvExj37nt0CfdqaJE8=\""
+          "Value": "\"fWhuGP474QsRelpKmJQrshdKmQu6kxwDSffmjGob9GI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9412,19 +9412,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A=\""
+          "Value": "W/\"Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A="
+          "Value": "sha256-Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-vessd5fs0w.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\gabtfuurp3-zcxece3e9m.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9441,7 +9441,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12504"
+          "Value": "9714"
         },
         {
           "Name": "Content-Type",
@@ -9449,11 +9449,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vJGA61YN0waskZs+XJh2TTAU1nvExj37nt0CfdqaJE8=\""
+          "Value": "\"fWhuGP474QsRelpKmJQrshdKmQu6kxwDSffmjGob9GI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9463,7 +9463,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vJGA61YN0waskZs+XJh2TTAU1nvExj37nt0CfdqaJE8="
+          "Value": "sha256-fWhuGP474QsRelpKmJQrshdKmQu6kxwDSffmjGob9GI="
         }
       ]
     },
@@ -9482,7 +9482,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8469"
+          "Value": "15125"
         },
         {
           "Name": "Content-Type",
@@ -9490,28 +9490,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM=\""
+          "Value": "\"nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
+          "Value": "Wed, 02 Apr 2025 19:53:00 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM="
+          "Value": "sha256-nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.wasm",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-bahpm83yu3.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-glmkrg55h6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000161394448"
+          "Quality": "0.000268672757"
         }
       ],
       "ResponseHeaders": [
@@ -9529,15 +9529,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6195"
+          "Value": "3721"
         },
         {
           "Name": "ETag",
-          "Value": "\"DTGuy5UDqlDHd3rlJE2nxYY4mZp1LHIfWPdGJD9+xxQ=\""
+          "Value": "\"V8ZDFO1IoLhf/NguNt9myBBKYrrniO1/ise9143ohG8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9549,19 +9549,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM=\""
+          "Value": "W/\"nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM="
+          "Value": "sha256-nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-bahpm83yu3.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\5482nzoime-glmkrg55h6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9578,7 +9578,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6195"
+          "Value": "3721"
         },
         {
           "Name": "Content-Type",
@@ -9586,11 +9586,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DTGuy5UDqlDHd3rlJE2nxYY4mZp1LHIfWPdGJD9+xxQ=\""
+          "Value": "\"V8ZDFO1IoLhf/NguNt9myBBKYrrniO1/ise9143ohG8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9600,7 +9600,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DTGuy5UDqlDHd3rlJE2nxYY4mZp1LHIfWPdGJD9+xxQ="
+          "Value": "sha256-V8ZDFO1IoLhf/NguNt9myBBKYrrniO1/ise9143ohG8="
         }
       ]
     },
@@ -9627,28 +9627,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"anELJjG6aUG34D5hCevMW8XOXQP2SYyw2V6g0qlIt3U=\""
+          "Value": "\"6Mdu5I2/feTqJtS8wXY7uQZ2baoTtfBW2WgwlJrkRwA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
+          "Value": "Wed, 02 Apr 2025 19:53:00 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-anELJjG6aUG34D5hCevMW8XOXQP2SYyw2V6g0qlIt3U="
+          "Value": "sha256-6Mdu5I2/feTqJtS8wXY7uQZ2baoTtfBW2WgwlJrkRwA="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-ilpobzmp19.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-wu03tdo4bc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000112283854"
+          "Quality": "0.000112271247"
         }
       ],
       "ResponseHeaders": [
@@ -9666,15 +9666,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8905"
+          "Value": "8906"
         },
         {
           "Name": "ETag",
-          "Value": "\"3dfVYtw4/UGkJe6UhIjn5NPgt7RmiPDeaXnMDlng8iQ=\""
+          "Value": "\"M76yBIkcwdsl+FKU8PU3IbKYaQCVKhYKbfgXAZJwEBg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9686,19 +9686,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"anELJjG6aUG34D5hCevMW8XOXQP2SYyw2V6g0qlIt3U=\""
+          "Value": "W/\"6Mdu5I2/feTqJtS8wXY7uQZ2baoTtfBW2WgwlJrkRwA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-anELJjG6aUG34D5hCevMW8XOXQP2SYyw2V6g0qlIt3U="
+          "Value": "sha256-6Mdu5I2/feTqJtS8wXY7uQZ2baoTtfBW2WgwlJrkRwA="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-ilpobzmp19.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\AquaparkApp.Client\\obj\\Debug\\net8.0\\compressed\\t525bxve2y-wu03tdo4bc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9715,7 +9715,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8905"
+          "Value": "8906"
         },
         {
           "Name": "Content-Type",
@@ -9723,11 +9723,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3dfVYtw4/UGkJe6UhIjn5NPgt7RmiPDeaXnMDlng8iQ=\""
+          "Value": "\"M76yBIkcwdsl+FKU8PU3IbKYaQCVKhYKbfgXAZJwEBg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 02 Apr 2025 08:07:40 GMT"
+          "Value": "Wed, 02 Apr 2025 08:11:13 GMT"
         },
         {
           "Name": "Vary",
@@ -9737,7 +9737,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3dfVYtw4/UGkJe6UhIjn5NPgt7RmiPDeaXnMDlng8iQ="
+          "Value": "sha256-M76yBIkcwdsl+FKU8PU3IbKYaQCVKhYKbfgXAZJwEBg="
         }
       ]
     },
