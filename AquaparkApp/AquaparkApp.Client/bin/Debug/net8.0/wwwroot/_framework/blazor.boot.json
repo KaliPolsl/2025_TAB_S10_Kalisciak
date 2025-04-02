@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AquaparkApp.Client",
   "resources": {
-    "hash": "sha256-zNKohu88Toix/9o8KcbdkgUOzVI7TqjqFv8pWfcgujQ=",
+    "hash": "sha256-v0xKAuxxZYdogaCJs85h5dN/JsPlLa0WspNrC8feWC4=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "AquaparkApp.Client.wasm": "sha256-PTapqA78WD67ILqqPftqd3FOW4QVBhosmaTP2c7bNxM="
+      "AquaparkApp.Client.wasm": "sha256-nIWXG+f1gpW2UoXVbxAhbiMyWL4u8kA+kd0MVe3NjZE="
     },
     "pdb": {
-      "AquaparkApp.Client.pdb": "sha256-KTBo4F67oZ6oFrb5E8+wzV3e/gDxSC69+D25pFMhT5A="
+      "AquaparkApp.Client.pdb": "sha256-Y9SYmjaazp0g/Xw42fbFSVXjPDvVNwmhwCrTLmRUH3w="
     }
   },
   "cacheBootResources": true,
