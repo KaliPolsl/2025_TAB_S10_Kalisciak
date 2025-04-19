@@ -1,7 +1,7 @@
 {
   "entryAssembly": "AquaparkApp.Client",
   "resources": {
-    "hash": "sha256-hXT5MbgS1NvQh/7g38Tv0Iw6r5htFSJwxLOQzvrxHM4=",
+    "hash": "sha256-DWeccno+8Fv14ZNIIHjf2n6JJjZODx8IYcuxDIDxkqc=",
     "runtime": {
       "dotnet.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -238,11 +238,11 @@
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
       "AquaparkApp.Shared.dll": "sha256-Lo05BLxb0Dkh5aKuZ00A3Fk9AKrZstyEs4fB9BOgRz8=",
-      "AquaparkApp.Client.dll": "sha256-RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q="
+      "AquaparkApp.Client.dll": "sha256-qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs="
     },
     "pdb": {
       "AquaparkApp.Shared.pdb": "sha256-m0WHsmixr3aJSBEUJHomSBAsc4xn1NXpmmcgUs9iNB0=",
-      "AquaparkApp.Client.pdb": "sha256-KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48="
+      "AquaparkApp.Client.pdb": "sha256-TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

@@ -1,13 +1,41 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="main-layout">
-    <header>
-        <h1>Moja aplikacja</h1>
-    </header>
-    <main>
-        @Body
-    </main>
-    <footer>
-        <p>Stopka</p>
-    </footer>
+<div class="d-flex min-vh-100 bg-light">
+    <!-- Sidebar -->
+    <div class="bg-white shadow p-4 border-end d-none d-md-block" style="width: 250px;">
+        <h2 class="text-primary mb-4">🌊 AquaParkApp</h2>
+        <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+                <NavLink href="" class="nav-link text-dark" activeClass="active">🏠 Strona główna</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink href="rezerwacje" class="nav-link text-dark" activeClass="active">📅 Rezerwacje</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink href="atrakcje" class="nav-link text-dark" activeClass="active">🎢 Atrakcje</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink href="konto" class="nav-link text-dark" activeClass="active">👤 Moje konto</NavLink>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-grow-1 d-flex flex-column">
+        <!-- Navbar (mobile) -->
+        <nav class="navbar navbar-light bg-white shadow-sm d-md-none px-3">
+            <span class="navbar-brand text-primary">🌊 AquaParkApp</span>
+            <!-- Możesz tu dodać przycisk do menu mobilnego -->
+        </nav>
+
+        <!-- Główna zawartość -->
+        <main class="flex-grow-1 p-4 overflow-auto">
+            @Body
+        </main>
+
+        <!-- Stopka -->
+        <footer class="text-center text-muted py-3 bg-white border-top">
+            © @DateTime.Now.Year AquaParkApp. Wszelkie prawa zastrzeżone.
+        </footer>
+    </div>
 </div>

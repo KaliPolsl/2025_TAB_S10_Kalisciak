@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hOIqzwDTjCRGnXPrq56lYy7+17sn+EfFgTwRdPFUSUE=",
+  "Hash": "dV3X9MfcSqZdHDPhF2ygY/BgZLgh8y5njwIRImQeXO0=",
   "Source": "AquaparkApp.Server",
   "BasePath": "_content/AquaparkApp.Server",
   "Mode": "Default",
@@ -43,8 +43,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "ead0qt5jcw",
-      "Integrity": "RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q=",
+      "Fingerprint": "nwwzag6450",
+      "Integrity": "qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.dll"
@@ -64,8 +64,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "l5idvr8x9u",
-      "Integrity": "KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48=",
+      "Fingerprint": "plc6hkp6kz",
+      "Integrity": "TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb"
@@ -169,8 +169,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "kg003hxgcf",
-      "Integrity": "VNnOy6dOirlr2jQEh8jQtSl3o3IVjUxnkyhwKKDAn90=",
+      "Fingerprint": "lpf8tr5i9d",
+      "Integrity": "d6VaKkxF9HGj7Iolo8L3RT/57P8jqvu4V0aTzaEmTUE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -7085,7 +7085,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\g9f8vgfbqk-li8wpogyle.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-l5idvr8x9u.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-plc6hkp6kz.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -7099,11 +7099,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "uuhahs0rzh",
-      "Integrity": "Giazqe4+jUj/EjOwYLgz0e+FLpig4w9kX+CXXvoaYSA=",
+      "Fingerprint": "srh6qhzio4",
+      "Integrity": "iHK0LEbufYn2R5h+II/9Cg7xnVMXye1Ymkl7k19cBSs=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-l5idvr8x9u.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-plc6hkp6kz.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\guc1w20ueq-j3x3ay3ee3.gz",
@@ -8891,7 +8891,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t0za584cnn-9zqro3rcxh.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-kg003hxgcf.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-lpf8tr5i9d.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -8905,11 +8905,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "kwft3cvsji",
-      "Integrity": "xHiuqckEwUl7uxrtBLgpgR9Svs6Z9QbJlo1EWmUpzs0=",
+      "Fingerprint": "iat9r8ox88",
+      "Integrity": "iteHebqIOg8xqo+EdpaxGTnLQ6NrmE33pQ5afnnhzA4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-kg003hxgcf.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-lpf8tr5i9d.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t5wvheg7p6-c02fhj7lqr.gz",
@@ -9899,7 +9899,7 @@
       "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z5rmj1i5gw-p0eob9uhw4.gz"
     },
     {
-      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-ead0qt5jcw.gz",
+      "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-nwwzag6450.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -9913,11 +9913,11 @@
       "RelatedAsset": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vorfw8wqmn",
-      "Integrity": "EQZFV7ncZQC8BHd81Tx33Gnh3ilXtXs40s6N4seYTFw=",
+      "Fingerprint": "ja32hv6efh",
+      "Integrity": "K+rDi+v7EoVPbc4EFGWCkDv9vYz2WKrxMbpRx0z52+4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-ead0qt5jcw.gz"
+      "OriginalItemSpec": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-nwwzag6450.gz"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\zbh5ckath3-d61i1lavha.gz",
@@ -10083,7 +10083,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15872"
+          "Value": "20992"
         },
         {
           "Name": "Content-Type",
@@ -10091,28 +10091,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q=\""
+          "Value": "\"qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:37 GMT"
+          "Value": "Sat, 19 Apr 2025 11:00:21 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q="
+          "Value": "sha256-qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.dll",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-ead0qt5jcw.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-nwwzag6450.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000123931094"
+          "Quality": "0.000112057373"
         }
       ],
       "ResponseHeaders": [
@@ -10130,15 +10130,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8068"
+          "Value": "8923"
         },
         {
           "Name": "ETag",
-          "Value": "\"EQZFV7ncZQC8BHd81Tx33Gnh3ilXtXs40s6N4seYTFw=\""
+          "Value": "\"K+rDi+v7EoVPbc4EFGWCkDv9vYz2WKrxMbpRx0z52+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:11 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:22 GMT"
         },
         {
           "Name": "Vary",
@@ -10150,19 +10150,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q=\""
+          "Value": "W/\"qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RkFFqNqh2pgqVNcyhp6uD+D71TVTB136pZhvNbrt37Q="
+          "Value": "sha256-qYSTnSh3nGH+Napneqe84YoTC6xd+EQRqoRw7HfypXs="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.dll.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-ead0qt5jcw.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-nwwzag6450.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10179,7 +10179,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8068"
+          "Value": "8923"
         },
         {
           "Name": "Content-Type",
@@ -10187,11 +10187,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EQZFV7ncZQC8BHd81Tx33Gnh3ilXtXs40s6N4seYTFw=\""
+          "Value": "\"K+rDi+v7EoVPbc4EFGWCkDv9vYz2WKrxMbpRx0z52+4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:11 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:22 GMT"
         },
         {
           "Name": "Vary",
@@ -10201,7 +10201,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EQZFV7ncZQC8BHd81Tx33Gnh3ilXtXs40s6N4seYTFw="
+          "Value": "sha256-K+rDi+v7EoVPbc4EFGWCkDv9vYz2WKrxMbpRx0z52+4="
         }
       ]
     },
@@ -10220,7 +10220,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19828"
+          "Value": "23980"
         },
         {
           "Name": "Content-Type",
@@ -10228,28 +10228,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48=\""
+          "Value": "\"TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:37 GMT"
+          "Value": "Sat, 19 Apr 2025 11:00:21 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48="
+          "Value": "sha256-TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-l5idvr8x9u.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-plc6hkp6kz.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000062818016"
+          "Quality": "0.000059683677"
         }
       ],
       "ResponseHeaders": [
@@ -10267,15 +10267,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15918"
+          "Value": "16754"
         },
         {
           "Name": "ETag",
-          "Value": "\"Giazqe4+jUj/EjOwYLgz0e+FLpig4w9kX+CXXvoaYSA=\""
+          "Value": "\"iHK0LEbufYn2R5h+II/9Cg7xnVMXye1Ymkl7k19cBSs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:11 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:22 GMT"
         },
         {
           "Name": "Vary",
@@ -10287,19 +10287,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48=\""
+          "Value": "W/\"TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KShzcxdunE84EGFgRFXmZ0pD7+0EIwmaqMTKmlrHf48="
+          "Value": "sha256-TRYbAnJHgihMY9SkBSVJ7CvTq8A9xccvtdEV/+OFERA="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-l5idvr8x9u.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-plc6hkp6kz.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10316,7 +10316,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15918"
+          "Value": "16754"
         },
         {
           "Name": "Content-Type",
@@ -10324,11 +10324,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Giazqe4+jUj/EjOwYLgz0e+FLpig4w9kX+CXXvoaYSA=\""
+          "Value": "\"iHK0LEbufYn2R5h+II/9Cg7xnVMXye1Ymkl7k19cBSs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:11 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:22 GMT"
         },
         {
           "Name": "Vary",
@@ -10338,7 +10338,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Giazqe4+jUj/EjOwYLgz0e+FLpig4w9kX+CXXvoaYSA="
+          "Value": "sha256-iHK0LEbufYn2R5h+II/9Cg7xnVMXye1Ymkl7k19cBSs="
         }
       ]
     },
@@ -10357,7 +10357,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5632"
+          "Value": "6656"
         },
         {
           "Name": "Content-Type",
@@ -10412,7 +10412,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:08 GMT"
+          "Value": "Sat, 19 Apr 2025 10:42:06 GMT"
         },
         {
           "Name": "Vary",
@@ -10465,7 +10465,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:08 GMT"
+          "Value": "Sat, 19 Apr 2025 10:42:06 GMT"
         },
         {
           "Name": "Vary",
@@ -10494,7 +10494,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10884"
+          "Value": "11380"
         },
         {
           "Name": "Content-Type",
@@ -10549,7 +10549,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:08 GMT"
+          "Value": "Sat, 19 Apr 2025 10:42:06 GMT"
         },
         {
           "Name": "Vary",
@@ -10602,7 +10602,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:08 GMT"
+          "Value": "Sat, 19 Apr 2025 10:42:06 GMT"
         },
         {
           "Name": "Vary",
@@ -10686,7 +10686,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 07 Sep 2023 17:50:30 GMT"
         },
         {
           "Name": "Vary",
@@ -10739,7 +10739,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 07 Sep 2023 17:50:30 GMT"
         },
         {
           "Name": "Vary",
@@ -10823,7 +10823,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Wed, 18 Oct 2023 19:59:42 GMT"
         },
         {
           "Name": "Vary",
@@ -10876,7 +10876,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Wed, 18 Oct 2023 19:59:42 GMT"
         },
         {
           "Name": "Vary",
@@ -10905,7 +10905,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19815"
+          "Value": "23103"
         },
         {
           "Name": "Content-Type",
@@ -10913,28 +10913,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"VNnOy6dOirlr2jQEh8jQtSl3o3IVjUxnkyhwKKDAn90=\""
+          "Value": "\"d6VaKkxF9HGj7Iolo8L3RT/57P8jqvu4V0aTzaEmTUE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sat, 19 Apr 2025 11:00:22 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VNnOy6dOirlr2jQEh8jQtSl3o3IVjUxnkyhwKKDAn90="
+          "Value": "sha256-d6VaKkxF9HGj7Iolo8L3RT/57P8jqvu4V0aTzaEmTUE="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-kg003hxgcf.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-lpf8tr5i9d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000095265314"
+          "Quality": "0.000095274390"
         }
       ],
       "ResponseHeaders": [
@@ -10952,15 +10952,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10496"
+          "Value": "10495"
         },
         {
           "Name": "ETag",
-          "Value": "\"xHiuqckEwUl7uxrtBLgpgR9Svs6Z9QbJlo1EWmUpzs0=\""
+          "Value": "\"iteHebqIOg8xqo+EdpaxGTnLQ6NrmE33pQ5afnnhzA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:12 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:23 GMT"
         },
         {
           "Name": "Vary",
@@ -10972,19 +10972,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"VNnOy6dOirlr2jQEh8jQtSl3o3IVjUxnkyhwKKDAn90=\""
+          "Value": "W/\"d6VaKkxF9HGj7Iolo8L3RT/57P8jqvu4V0aTzaEmTUE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-VNnOy6dOirlr2jQEh8jQtSl3o3IVjUxnkyhwKKDAn90="
+          "Value": "sha256-d6VaKkxF9HGj7Iolo8L3RT/57P8jqvu4V0aTzaEmTUE="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-kg003hxgcf.gz",
+      "AssetFile": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-lpf8tr5i9d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11001,7 +11001,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10496"
+          "Value": "10495"
         },
         {
           "Name": "Content-Type",
@@ -11009,11 +11009,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xHiuqckEwUl7uxrtBLgpgR9Svs6Z9QbJlo1EWmUpzs0=\""
+          "Value": "\"iteHebqIOg8xqo+EdpaxGTnLQ6NrmE33pQ5afnnhzA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:28:12 GMT"
+          "Value": "Sat, 19 Apr 2025 10:57:23 GMT"
         },
         {
           "Name": "Vary",
@@ -11023,7 +11023,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xHiuqckEwUl7uxrtBLgpgR9Svs6Z9QbJlo1EWmUpzs0="
+          "Value": "sha256-iteHebqIOg8xqo+EdpaxGTnLQ6NrmE33pQ5afnnhzA4="
         }
       ]
     },
@@ -11782,7 +11782,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sat, 29 Jan 2022 15:04:04 GMT"
         },
         {
           "Name": "Vary",
@@ -11835,7 +11835,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sat, 29 Jan 2022 15:04:04 GMT"
         },
         {
           "Name": "Vary",
@@ -13152,7 +13152,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 14 Apr 2020 22:39:12 GMT"
         },
         {
           "Name": "Vary",
@@ -13205,7 +13205,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 14 Apr 2020 22:39:12 GMT"
         },
         {
           "Name": "Vary",
@@ -13426,7 +13426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sat, 27 Jan 2024 02:49:44 GMT"
         },
         {
           "Name": "Vary",
@@ -13479,7 +13479,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sat, 27 Jan 2024 02:49:44 GMT"
         },
         {
           "Name": "Vary",
@@ -13563,7 +13563,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:48:56 GMT"
         },
         {
           "Name": "Vary",
@@ -13616,7 +13616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:48:56 GMT"
         },
         {
           "Name": "Vary",
@@ -13700,7 +13700,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:26 GMT"
         },
         {
           "Name": "Vary",
@@ -13753,7 +13753,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:26 GMT"
         },
         {
           "Name": "Vary",
@@ -13837,7 +13837,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:12 GMT"
         },
         {
           "Name": "Vary",
@@ -13890,7 +13890,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:12 GMT"
         },
         {
           "Name": "Vary",
@@ -13974,7 +13974,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:22 GMT"
         },
         {
           "Name": "Vary",
@@ -14027,7 +14027,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:22 GMT"
         },
         {
           "Name": "Vary",
@@ -14111,7 +14111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:30 GMT"
         },
         {
           "Name": "Vary",
@@ -14164,7 +14164,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Sun, 19 May 2024 23:49:30 GMT"
         },
         {
           "Name": "Vary",
@@ -14248,7 +14248,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:18 GMT"
         },
         {
           "Name": "Vary",
@@ -14301,7 +14301,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:18 GMT"
         },
         {
           "Name": "Vary",
@@ -14385,7 +14385,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:48 GMT"
         },
         {
           "Name": "Vary",
@@ -14438,7 +14438,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:48 GMT"
         },
         {
           "Name": "Vary",
@@ -15481,7 +15481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:30 GMT"
         },
         {
           "Name": "Vary",
@@ -15534,7 +15534,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 18 Oct 2022 16:15:30 GMT"
         },
         {
           "Name": "Vary",
@@ -16714,7 +16714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 05 Sep 2023 18:25:28 GMT"
         },
         {
           "Name": "Vary",
@@ -16767,7 +16767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 05 Sep 2023 18:25:28 GMT"
         },
         {
           "Name": "Vary",
@@ -16851,7 +16851,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 05 Sep 2023 18:31:58 GMT"
         },
         {
           "Name": "Vary",
@@ -16904,7 +16904,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 05 Sep 2023 18:31:58 GMT"
         },
         {
           "Name": "Vary",
@@ -16988,7 +16988,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:56:56 GMT"
         },
         {
           "Name": "Vary",
@@ -17041,7 +17041,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:56:56 GMT"
         },
         {
           "Name": "Vary",
@@ -17125,7 +17125,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:34:00 GMT"
         },
         {
           "Name": "Vary",
@@ -17178,7 +17178,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:34:00 GMT"
         },
         {
           "Name": "Vary",
@@ -17262,7 +17262,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:35:22 GMT"
         },
         {
           "Name": "Vary",
@@ -17315,7 +17315,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:35:22 GMT"
         },
         {
           "Name": "Vary",
@@ -17399,7 +17399,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:37:28 GMT"
         },
         {
           "Name": "Vary",
@@ -17452,7 +17452,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:37:28 GMT"
         },
         {
           "Name": "Vary",
@@ -17536,7 +17536,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:48:08 GMT"
         },
         {
           "Name": "Vary",
@@ -17589,7 +17589,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:48:08 GMT"
         },
         {
           "Name": "Vary",
@@ -17673,7 +17673,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:41:50 GMT"
         },
         {
           "Name": "Vary",
@@ -17726,7 +17726,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:41:50 GMT"
         },
         {
           "Name": "Vary",
@@ -18084,7 +18084,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 27 Jan 2022 17:19:08 GMT"
         },
         {
           "Name": "Vary",
@@ -18137,7 +18137,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 27 Jan 2022 17:19:08 GMT"
         },
         {
           "Name": "Vary",
@@ -18769,7 +18769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:40:24 GMT"
         },
         {
           "Name": "Vary",
@@ -18822,7 +18822,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:40:24 GMT"
         },
         {
           "Name": "Vary",
@@ -18906,7 +18906,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 23 Feb 2021 03:04:28 GMT"
         },
         {
           "Name": "Vary",
@@ -18959,7 +18959,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Tue, 23 Feb 2021 03:04:28 GMT"
         },
         {
           "Name": "Vary",
@@ -19591,7 +19591,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Wed, 19 Jul 2017 10:01:30 GMT"
         },
         {
           "Name": "Vary",
@@ -19644,7 +19644,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Wed, 19 Jul 2017 10:01:30 GMT"
         },
         {
           "Name": "Vary",
@@ -21235,7 +21235,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 19 Aug 2022 19:58:02 GMT"
         },
         {
           "Name": "Vary",
@@ -21288,7 +21288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 19 Aug 2022 19:58:02 GMT"
         },
         {
           "Name": "Vary",
@@ -23701,7 +23701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:12 GMT"
         },
         {
           "Name": "Vary",
@@ -23754,7 +23754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:12 GMT"
         },
         {
           "Name": "Vary",
@@ -24934,7 +24934,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:31:48 GMT"
         },
         {
           "Name": "Vary",
@@ -24987,7 +24987,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 01 Dec 2023 04:31:48 GMT"
         },
         {
           "Name": "Vary",
@@ -27811,7 +27811,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 08 Apr 2021 16:45:54 GMT"
         },
         {
           "Name": "Vary",
@@ -27864,7 +27864,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Thu, 08 Apr 2021 16:45:54 GMT"
         },
         {
           "Name": "Vary",
@@ -33428,7 +33428,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:52:02 GMT"
         },
         {
           "Name": "Vary",
@@ -33481,7 +33481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:52:02 GMT"
         },
         {
           "Name": "Vary",
@@ -36990,7 +36990,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:51:04 GMT"
         },
         {
           "Name": "Vary",
@@ -37043,7 +37043,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:51:04 GMT"
         },
         {
           "Name": "Vary",
@@ -37401,7 +37401,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:50 GMT"
         },
         {
           "Name": "Vary",
@@ -37454,7 +37454,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:50 GMT"
         },
         {
           "Name": "Vary",
@@ -41237,7 +41237,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:44 GMT"
         },
         {
           "Name": "Vary",
@@ -41290,7 +41290,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 19 Apr 2025 10:44:38 GMT"
+          "Value": "Fri, 22 Oct 2021 23:49:44 GMT"
         },
         {
           "Name": "Vary",
