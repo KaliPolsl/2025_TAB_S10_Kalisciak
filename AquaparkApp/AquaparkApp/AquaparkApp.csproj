@@ -16,4 +16,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Pages\Account\" />
+    <Folder Include="Nowy folder\" />
+  </ItemGroup>
+
 </Project>

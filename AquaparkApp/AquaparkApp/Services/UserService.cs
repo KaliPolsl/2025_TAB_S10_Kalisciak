@@ -16,7 +16,7 @@ public class UserService
     {
         using IDbConnection db = new SqlConnection(_connectionString);
 
-        var query = "SELECT UserId, Username, Email, Role, IsBlocked, CreatedAt, UpdatedAt FROM dbo.Users";
+        var query = "SELECT UserId, Username, PasswordHash, Email, Role, IsBlocked, CreatedAt, UpdatedAt FROM dbo.Users";
         return await db.QueryAsync<User>(query);
     }
 }

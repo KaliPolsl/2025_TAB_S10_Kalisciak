@@ -14,6 +14,7 @@ else
             <tr>
                 <th>ID</th>
                 <th>Nazwa użytkownika</th>
+                <th>Hasło</th>
                 <th>Email</th>
                 <th>Rola</th>
                 <th>Status</th>
@@ -26,6 +27,7 @@ else
                 <tr>
                     <td>@user.UserId</td>
                     <td>@user.Username</td>
+                    <td>@user.PasswordHash</td>
                     <td>@user.Email</td>
                     <td>@user.Role</td>
                     <td>@(user.IsBlocked ? "Zablokowany" : "Aktywny")</td>

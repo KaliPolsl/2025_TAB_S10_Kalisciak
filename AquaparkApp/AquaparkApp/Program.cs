@@ -1,5 +1,6 @@
 using AquaparkApp.Client.Pages;
 using AquaparkApp.Components;
+using Microsoft.AspNetCore.Authentication.Cookies;
 //using AquaparkApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.Cookie.Name = "auth_token";
+    options.LoginPath = "/login";
+    options.Cookie.MaxAge = TimeSpan.FromMinutes(30);
+    options.AccessDeniedPath = "/access-denied";
+});
 
-
+builder.Services.AddAuthorization();
+builder.Services.AddCascadingAuthenticationState();
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
@@ -33,6 +42,8 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
