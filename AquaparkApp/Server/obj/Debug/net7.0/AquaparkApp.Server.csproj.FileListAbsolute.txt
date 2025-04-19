@@ -50,7 +50,6 @@ C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Serve
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.AquaparkApp.Server.props
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.AquaparkApp.Server.props
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\Aquapark.76E6D737.Up2Date
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\AquaparkApp.Server.dll
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Server\obj\Debug\net7.0\refint\AquaparkApp.Server.dll

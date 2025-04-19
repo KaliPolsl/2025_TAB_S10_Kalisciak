@@ -229,7 +229,7 @@
         },
         "runtime": {
           "AquaparkApp.Client.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -237,7 +237,7 @@
       "AquaparkApp.Shared/1.0.0": {
         "runtime": {
           "AquaparkApp.Shared.dll": {
-            "assemblyVersion": "1.0.0",
+            "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
