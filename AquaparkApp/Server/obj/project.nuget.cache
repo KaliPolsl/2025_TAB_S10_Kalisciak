@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1QyPzR1BBBA=",
+  "dgSpecHash": "qUfFlzkFCwo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\blazorpro.blazorsize\\9.0.0\\blazorpro.blazorsize.9.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.19\\microsoft.aspnetcore.authorization.7.0.19.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.19\\microsoft.aspnetcore.components.7.0.19.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.19\\microsoft.aspnetcore.components.analyzers.7.0.19.nupkg.sha512",

@@ -10,6 +10,7 @@
         "dependencies": {
           "AquaparkApp.Client": "1.0.0",
           "AquaparkApp.Shared": "1.0.0",
+          "BlazorPro.BlazorSize": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "7.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4"
         },
@@ -52,6 +53,7 @@
           }
         }
       },
+      "BlazorPro.BlazorSize/9.0.0": {},
       "Microsoft.AspNetCore.Authorization/7.0.19": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "7.0.19",
@@ -734,6 +736,7 @@
       "AquaparkApp.Client/1.0.0": {
         "dependencies": {
           "AquaparkApp.Shared": "1.0.0",
+          "BlazorPro.BlazorSize": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4",
           "Microsoft.Extensions.Http": "7.0.0"
@@ -774,6 +777,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "BlazorPro.BlazorSize/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hkMqmiIc6GayS8MNajNFZYb3qRVTY3+YBI4HE65ITffq9GQZ3ErXnGHTFhJGVuOC+9In1VZl0KcDDGwP0lJO8Q==",
+      "path": "blazorpro.blazorsize/9.0.0",
+      "hashPath": "blazorpro.blazorsize.9.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/7.0.19": {
       "type": "package",

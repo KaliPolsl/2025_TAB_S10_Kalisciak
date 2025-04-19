@@ -47,6 +47,15 @@
           }
         }
       },
+      "BlazorPro.BlazorSize/9.0.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/BlazorPro.BlazorSize.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorPro.BlazorSize.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/7.0.19": {
         "type": "package",
         "dependencies": {
@@ -1333,6 +1342,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AquaparkApp.Shared": "1.0.0",
+          "BlazorPro.BlazorSize": "9.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "7.0.19",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.20",
           "Microsoft.Extensions.Http": "7.0.0"
@@ -1393,6 +1403,30 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "BlazorPro.BlazorSize/9.0.0": {
+      "sha512": "hkMqmiIc6GayS8MNajNFZYb3qRVTY3+YBI4HE65ITffq9GQZ3ErXnGHTFhJGVuOC+9In1VZl0KcDDGwP0lJO8Q==",
+      "type": "package",
+      "path": "blazorpro.blazorsize/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "blazor-glove-128.jpg",
+        "blazorpro.blazorsize.9.0.0.nupkg.sha512",
+        "blazorpro.blazorsize.nuspec",
+        "build/BlazorPro.BlazorSize.props",
+        "build/Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorPro.BlazorSize.props",
+        "buildTransitive/BlazorPro.BlazorSize.props",
+        "lib/net9.0/BlazorPro.BlazorSize.dll",
+        "readme.md",
+        "staticwebassets/blazorSizeMedia.js",
+        "staticwebassets/blazorSizeMediaModule.js",
+        "staticwebassets/blazorSizeResize.js",
+        "staticwebassets/blazorSizeResizeModule.js"
       ]
     },
     "Microsoft.AspNetCore.Authorization/7.0.19": {
@@ -3543,6 +3577,7 @@
     "net8.0": [
       "AquaparkApp.Client >= 1.0.0",
       "AquaparkApp.Shared >= 1.0.0",
+      "BlazorPro.BlazorSize >= 9.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly.Server >= 7.0.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4"
     ]
@@ -3605,6 +3640,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "BlazorPro.BlazorSize": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly.Server": {
             "target": "Package",
             "version": "[7.0.19, )"

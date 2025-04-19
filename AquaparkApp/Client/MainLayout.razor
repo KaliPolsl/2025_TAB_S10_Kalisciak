@@ -1,41 +1,203 @@
-﻿@inherits LayoutComponentBase
+﻿@using AquaparkApp.Client.Services
+@using Microsoft.JSInterop
 
-<div class="d-flex min-vh-100 bg-light">
-    <!-- Sidebar -->
-    <div class="bg-white shadow p-4 border-end d-none d-md-block" style="width: 250px;">
-        <h2 class="text-primary mb-4">🌊 AquaParkApp</h2>
-        <ul class="nav flex-column gap-2">
-            <li class="nav-item">
-                <NavLink href="" class="nav-link text-dark" activeClass="active">🏠 Strona główna</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="rezerwacje" class="nav-link text-dark" activeClass="active">📅 Rezerwacje</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="atrakcje" class="nav-link text-dark" activeClass="active">🎢 Atrakcje</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink href="konto" class="nav-link text-dark" activeClass="active">👤 Moje konto</NavLink>
-            </li>
-        </ul>
+@inherits LayoutComponentBase
+@implements IDisposable
+
+@inject BrowserWindowSizeProvider BrowserWindowSize
+
+<div class="page">
+    <!-- Mobile Header -->
+    <div class="mobile-header d-lg-none bg-primary p-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-water me-2 fs-4 text-white"></i>
+            <span class="navbar-brand text-white">AquaparkApp</span>
+        </div>
+        <button class="btn btn-outline-light" @onclick="ToggleSidebar">
+            <i class="bi @(sidebarCollapsed ? "bi-list" : "bi-x")"></i>
+        </button>
     </div>
 
-    <!-- Main content -->
-    <div class="flex-grow-1 d-flex flex-column">
-        <!-- Navbar (mobile) -->
-        <nav class="navbar navbar-light bg-white shadow-sm d-md-none px-3">
-            <span class="navbar-brand text-primary">🌊 AquaParkApp</span>
-            <!-- Możesz tu dodać przycisk do menu mobilnego -->
+    <!-- Sidebar -->
+    <div class="@GetSidebarClass()">
+        <div class="sidebar-header d-none d-lg-flex align-items-center p-3">
+            <i class="bi bi-water me-2 fs-4 text-white"></i>
+            <span class="navbar-brand text-white">AquaparkApp</span>
+        </div>
+
+        <nav class="flex-column">
+            <div class="nav-item px-3 py-2">
+                <NavLink class="nav-link text-white" href="" Match="NavLinkMatch.All" @onclick="CloseSidebarOnMobile">
+                    <i class="bi bi-house-door me-2"></i>Strona główna
+                </NavLink>
+            </div>
+            <div class="nav-item px-3 py-2">
+                <NavLink class="nav-link text-white" href="attractions" @onclick="CloseSidebarOnMobile">
+                    <i class="bi bi-water me-2"></i>Atrakcje
+                </NavLink>
+            </div>
+            <div class="nav-item px-3 py-2">
+                <NavLink class="nav-link text-white" href="tickets" @onclick="CloseSidebarOnMobile">
+                    <i class="bi bi-ticket-perforated me-2"></i>Bilety
+                </NavLink>
+            </div>
+            <div class="nav-item px-3 py-2">
+                <NavLink class="nav-link text-white" href="schedule" @onclick="CloseSidebarOnMobile">
+                    <i class="bi bi-calendar3 me-2"></i>Harmonogram
+                </NavLink>
+            </div>
+            <div class="nav-item px-3 py-2">
+                <NavLink class="nav-link text-white" href="contact" @onclick="CloseSidebarOnMobile">
+                    <i class="bi bi-telephone me-2"></i>Kontakt
+                </NavLink>
+            </div>
         </nav>
+    </div>
 
-        <!-- Główna zawartość -->
-        <main class="flex-grow-1 p-4 overflow-auto">
+    <!-- Main Content -->
+    <div class="main">
+        <div class="top-row px-4 bg-light d-none d-lg-flex">
+            <div class="d-flex justify-content-end w-100">
+                <a href="https://learn.microsoft.com/aspnet/core/" target="_blank" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-info-circle"></i> O aplikacji
+                </a>
+            </div>
+        </div>
+
+        <div class="content px-4 py-3">
+            <!-- Overlay for mobile when sidebar is open -->
+            <div class="@(sidebarCollapsed ? "" : "sidebar-overlay")" @onclick="CloseSidebarOnMobile"></div>
             @Body
-        </main>
-
-        <!-- Stopka -->
-        <footer class="text-center text-muted py-3 bg-white border-top">
-            © @DateTime.Now.Year AquaParkApp. Wszelkie prawa zastrzeżone.
-        </footer>
+        </div>
     </div>
 </div>
+
+@code {
+    private bool sidebarCollapsed = true;
+    private DotNetObjectReference<MainLayout>? objRef;
+
+    protected override void OnInitialized()
+    {
+        objRef = DotNetObjectReference.Create(this);
+    }
+
+    private string GetSidebarClass()
+    {
+        if (sidebarCollapsed)
+            return "sidebar sidebar-collapsed";
+        else
+            return "sidebar sidebar-expanded";
+    }
+
+    private void ToggleSidebar()
+    {
+        sidebarCollapsed = !sidebarCollapsed;
+    }
+
+    private void CloseSidebarOnMobile()
+    {
+        if (IsMobile())
+        {
+            sidebarCollapsed = true;
+        }
+    }
+
+    private bool IsMobile() => BrowserWindowSize.IsMobile;
+
+    public void Dispose()
+    {
+        objRef?.Dispose();
+    }
+}
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #0d6efd;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar-collapsed {
+        transform: translateX(-100%);
+    }
+
+    .sidebar-expanded {
+        transform: translateX(0);
+    }
+
+    /* Mobile header */
+    .mobile-header {
+        position: sticky;
+        top: 0;
+        z-index: 900;
+        height: 60px;
+    }
+
+    /* Main content */
+    .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+    .content {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    /* Nav items */
+    .nav-item:hover {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 4px;
+    }
+
+    .nav-link.active {
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 4px;
+        font-weight: 500;
+    }
+
+    /* Overlay for mobile */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+
+    @@media (min-width: 992px) {
+        .page {
+            flex-direction: row;
+        }
+
+        .main {
+            margin-left: 250px;
+        }
+
+        .sidebar-collapsed {
+            transform: translateX(0);
+        }
+
+        .mobile-header {
+            display: none !important;
+        }
+    }
+</style>

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\pages\\contact.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\pages\\contact.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,12 +19,32 @@
       "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\pages\\users.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\shared\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|solutionrelative:shared\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\services\\browserwindowsizeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\services\\browserwindowsizeprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,28 +55,20 @@
       "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\shared\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|solutionrelative:shared\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\shared\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}|Shared\\AquaparkApp.Shared.csproj|solutionrelative:shared\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}|Client\\AquaparkApp.Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7F18809-18E4-4986-A6FD-480400FBD875}|Server\\AquaparkApp.Server.csproj|c:\\users\\administrator\\documents\\github\\2025_tab_s10_kalisciak\\aquaparkapp\\server\\aquaparkapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -74,83 +86,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Index.razor",
-              "RelativeDocumentMoniker": "Client\\Pages\\Index.razor",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Index.razor",
-              "RelativeToolTip": "Client\\Pages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T11:01:11.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Program.cs",
-              "RelativeDocumentMoniker": "Client\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Program.cs",
-              "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:41:43.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Users.razor",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Users.razor",
-              "RelativeDocumentMoniker": "Client\\Pages\\Users.razor",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Users.razor",
-              "RelativeToolTip": "Client\\Pages\\Users.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T10:36:45.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\User.cs",
-              "RelativeDocumentMoniker": "Shared\\User.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\User.cs",
-              "RelativeToolTip": "Shared\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:35:29.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Server\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:23:59.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\appsettings.json",
-              "RelativeDocumentMoniker": "Server\\appsettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\appsettings.json",
-              "RelativeToolTip": "Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-19T09:58:40.841Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -159,14 +96,14 @@
               "RelativeDocumentMoniker": "Client\\Pages\\Todo.razor",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Todo.razor",
               "RelativeToolTip": "Client\\Pages\\Todo.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-19T09:54:08.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "TodoItem.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\TodoItem.cs",
               "RelativeDocumentMoniker": "Shared\\TodoItem.cs",
@@ -179,18 +116,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Program.cs",
-              "RelativeToolTip": "Server\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T09:49:50.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\App.razor",
               "RelativeDocumentMoniker": "Client\\App.razor",
@@ -198,25 +123,23 @@
               "RelativeToolTip": "Client\\App.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T09:48:38.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-19T09:48:38.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Client\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\MainLayout.razor",
-              "RelativeToolTip": "Client\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-19T09:48:36.241Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Server\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T10:50:18.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "TodoController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\TodoController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\TodoController.cs",
@@ -229,18 +152,146 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Server\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T10:50:18.262Z"
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Client\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\MainLayout.razor",
+              "RelativeToolTip": "Client\\MainLayout.razor",
+              "ViewState": "AgIAACsAAAAAAAAAAAAUwEUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T09:48:36.241Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\User.cs",
+              "RelativeDocumentMoniker": "Shared\\User.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\User.cs",
+              "RelativeToolTip": "Shared\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T10:35:29.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Program.cs",
+              "RelativeDocumentMoniker": "Client\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Program.cs",
+              "RelativeToolTip": "Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T10:41:43.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Index.razor",
+              "RelativeToolTip": "Client\\Pages\\Index.razor",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAALoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T11:01:11.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BrowserWindowSizeProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Services\\BrowserWindowSizeProvider.cs",
+              "RelativeDocumentMoniker": "Client\\Services\\BrowserWindowSizeProvider.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Services\\BrowserWindowSizeProvider.cs",
+              "RelativeToolTip": "Client\\Services\\BrowserWindowSizeProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T13:19:53.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Users.razor",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Users.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Users.razor",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Users.razor*",
+              "RelativeToolTip": "Client\\Pages\\Users.razor*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T10:36:45.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.razor",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Contact.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Contact.razor",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\Pages\\Contact.razor",
+              "RelativeToolTip": "Client\\Pages\\Contact.razor",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAkwLUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-19T13:29:35.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "Client\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\wwwroot\\index.html",
+              "RelativeToolTip": "Client\\wwwroot\\index.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAUwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-19T12:58:57.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\appsettings.json",
+              "RelativeToolTip": "Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-19T09:58:40.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Server\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Server\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T10:23:59.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Server\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T12:16:31.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\_Imports.razor",
               "RelativeDocumentMoniker": "Client\\_Imports.razor",
@@ -252,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AquaparkApp.Server.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
               "RelativeDocumentMoniker": "Server\\AquaparkApp.Server.csproj",
@@ -264,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "SharedClass.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\SharedClass.cs",
               "RelativeDocumentMoniker": "Shared\\SharedClass.cs",

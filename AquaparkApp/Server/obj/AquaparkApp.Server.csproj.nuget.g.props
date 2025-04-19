@@ -15,6 +15,7 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.4\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\9.0.4\buildTransitive\net8.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)blazorpro.blazorsize\9.0.0\buildTransitive\BlazorPro.BlazorSize.props" Condition="Exists('$(NuGetPackageRoot)blazorpro.blazorsize\9.0.0\buildTransitive\BlazorPro.BlazorSize.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\Administrator\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\7.0.19</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>
