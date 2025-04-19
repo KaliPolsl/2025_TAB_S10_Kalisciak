@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp", "AquaparkApp\AquaparkApp.csproj", "{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp.Server", "Server\AquaparkApp.Server.csproj", "{D7F18809-18E4-4986-A6FD-480400FBD875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp.Client", "AquaparkApp.Client\AquaparkApp.Client.csproj", "{CE76802E-9171-4CA2-A896-1207D481C424}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp.Client", "Client\AquaparkApp.Client.csproj", "{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaparkApp.Shared", "Shared\AquaparkApp.Shared.csproj", "{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8845ECD2-6B35-4913-9CA6-A79A369CA6A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE76802E-9171-4CA2-A896-1207D481C424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE76802E-9171-4CA2-A896-1207D481C424}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE76802E-9171-4CA2-A896-1207D481C424}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE76802E-9171-4CA2-A896-1207D481C424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F18809-18E4-4986-A6FD-480400FBD875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F18809-18E4-4986-A6FD-480400FBD875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F18809-18E4-4986-A6FD-480400FBD875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F18809-18E4-4986-A6FD-480400FBD875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BB0AAE7-966E-4B47-B37C-6634C0A8DF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F156A2B8-DDFF-49B4-9066-80CE39ADDBF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,50 @@
+﻿@page "/users"
+@using AquaparkApp.Shared
+@inject HttpClient Http
+
+
+<h3>Lista użytkowników</h3>
+
+@if (users == null)
+{
+    <p>Ładowanie...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>IsBlocked</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.UserId</td>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                    <td>@user.Role</td>
+                    <td>@(user.IsBlocked ? "Yes" : "No")</td>
+                    <td>@user.CreatedAt</td>
+                    <td>@user.UpdatedAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<User> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<List<User>>("api/user");
+    }
+}
