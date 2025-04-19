@@ -1,14 +1,16 @@
 ﻿@using AquaparkApp.Client.Services
 @using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Components.Routing
 
 @inherits LayoutComponentBase
 @implements IDisposable
 
 @inject BrowserWindowSizeProvider BrowserWindowSize
+@inject NavigationManager NavigationManager
 
 <div class="page">
     <!-- Mobile Header -->
-    <div class="mobile-header d-lg-none bg-primary p-3 d-flex justify-content-between align-items-center">
+    <div class="mobile-header d-lg-none bg-primary p-3 d-flex justify-content-between align-items-center" style="z-index: 1001;">
         <div class="d-flex align-items-center">
             <i class="bi bi-water me-2 fs-4 text-white"></i>
             <span class="navbar-brand text-white">AquaparkApp</span>
@@ -27,27 +29,27 @@
 
         <nav class="flex-column">
             <div class="nav-item px-3 py-2">
-                <NavLink class="nav-link text-white" href="" Match="NavLinkMatch.All" @onclick="CloseSidebarOnMobile">
+                <NavLink class="nav-link text-white" href="" Match="NavLinkMatch.All" @onclick="CloseSidebar">
                     <i class="bi bi-house-door me-2"></i>Strona główna
                 </NavLink>
             </div>
             <div class="nav-item px-3 py-2">
-                <NavLink class="nav-link text-white" href="attractions" @onclick="CloseSidebarOnMobile">
+                <NavLink class="nav-link text-white" href="attractions" @onclick="CloseSidebar">
                     <i class="bi bi-water me-2"></i>Atrakcje
                 </NavLink>
             </div>
             <div class="nav-item px-3 py-2">
-                <NavLink class="nav-link text-white" href="tickets" @onclick="CloseSidebarOnMobile">
+                <NavLink class="nav-link text-white" href="tickets" @onclick="CloseSidebar">
                     <i class="bi bi-ticket-perforated me-2"></i>Bilety
                 </NavLink>
             </div>
             <div class="nav-item px-3 py-2">
-                <NavLink class="nav-link text-white" href="schedule" @onclick="CloseSidebarOnMobile">
+                <NavLink class="nav-link text-white" href="schedule" @onclick="CloseSidebar">
                     <i class="bi bi-calendar3 me-2"></i>Harmonogram
                 </NavLink>
             </div>
             <div class="nav-item px-3 py-2">
-                <NavLink class="nav-link text-white" href="contact" @onclick="CloseSidebarOnMobile">
+                <NavLink class="nav-link text-white" href="contact" @onclick="CloseSidebar">
                     <i class="bi bi-telephone me-2"></i>Kontakt
                 </NavLink>
             </div>
@@ -56,8 +58,8 @@
 
     <!-- Main Content -->
     <div class="main">
-        <div class="top-row px-4 bg-light d-none d-lg-flex">
-            <div class="d-flex justify-content-end w-100">
+        <div class="top-row px-4 bg-light d-none d-lg-flex ">
+            <div class="d-flex justify-content-end w-100 " style="margin: 10px">
                 <a href="https://learn.microsoft.com/aspnet/core/" target="_blank" class="btn btn-sm btn-outline-primary">
                     <i class="bi bi-info-circle"></i> O aplikacji
                 </a>
@@ -66,7 +68,7 @@
 
         <div class="content px-4 py-3">
             <!-- Overlay for mobile when sidebar is open -->
-            <div class="@(sidebarCollapsed ? "" : "sidebar-overlay")" @onclick="CloseSidebarOnMobile"></div>
+            <div class="@(sidebarCollapsed ? "" : "sidebar-overlay")" @onclick="CloseSidebar"></div>
             @Body
         </div>
     </div>
@@ -79,6 +81,13 @@
     protected override void OnInitialized()
     {
         objRef = DotNetObjectReference.Create(this);
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        CloseSidebar();
+        StateHasChanged();
     }
 
     private string GetSidebarClass()
@@ -94,7 +103,7 @@
         sidebarCollapsed = !sidebarCollapsed;
     }
 
-    private void CloseSidebarOnMobile()
+    private void CloseSidebar()
     {
         if (IsMobile())
         {
@@ -107,17 +116,18 @@
     public void Dispose()
     {
         objRef?.Dispose();
+        NavigationManager.LocationChanged -= OnLocationChanged;
     }
 }
 
 <style>
+    /* Poprzednie style pozostają bez zmian */
     .page {
         display: flex;
         flex-direction: column;
         height: 100vh;
     }
 
-    /* Sidebar styles */
     .sidebar {
         width: 250px;
         height: 100vh;
@@ -138,15 +148,13 @@
         transform: translateX(0);
     }
 
-    /* Mobile header */
     .mobile-header {
         position: sticky;
         top: 0;
-        z-index: 900;
+        z-index: 1001;
         height: 60px;
     }
 
-    /* Main content */
     .main {
         flex: 1;
         display: flex;
@@ -160,7 +168,6 @@
         overflow-y: auto;
     }
 
-    /* Nav items */
     .nav-item:hover {
         background-color: rgba(255,255,255,0.1);
         border-radius: 4px;
@@ -172,7 +179,6 @@
         font-weight: 500;
     }
 
-    /* Overlay for mobile */
     .sidebar-overlay {
         position: fixed;
         top: 0;
@@ -181,6 +187,10 @@
         bottom: 0;
         background-color: rgba(0,0,0,0.5);
         z-index: 999;
+    }
+
+    .flex-column {
+        margin-top: 60px;
     }
 
     @@media (min-width: 992px) {
@@ -198,6 +208,10 @@
 
         .mobile-header {
             display: none !important;
+        }
+
+        .flex-column {
+            margin-top: 0;
         }
     }
 </style>

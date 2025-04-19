@@ -1,0 +1,93 @@
+﻿@page "/attractions"
+
+<div class="attractions-page">
+
+    <!-- Header -->
+    <section class="py-5 bg-light mb-5">
+        <div class="container text-center">
+            <h1 class="mb-3 text-primary">Nasze Atrakcje</h1>
+            <p class="lead">Odkryj wszystko, co oferuje nasz aquapark – zjeżdżalnie, baseny, strefy relaksu i więcej!</p>
+        </div>
+    </section>
+
+    <!-- Attractions Grid -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/attractions/slide.jpg" class="card-img-top rounded-top" alt="Zjeżdżalnie">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-lightning-charge-fill me-2"></i>Zjeżdżalnie</h5>
+                        <p class="card-text">Dla fanów adrenaliny – szybkie i zakręcone zjeżdżalnie dla dzieci i dorosłych.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/attractions/wavepool.jpg" class="card-img-top rounded-top" alt="Basen z falami">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-water me-2"></i>Basen z falami</h5>
+                        <p class="card-text">Poczuj się jak nad morzem dzięki realistycznym falom w naszym specjalnym basenie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/attractions/spa.jpg" class="card-img-top rounded-top" alt="Strefa relaksu">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-spa me-2"></i>Strefa relaksu</h5>
+                        <p class="card-text">Sauny, jacuzzi i aromaterapia – idealne miejsce na regenerację i odpoczynek.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/attractions/kids.jpg" class="card-img-top rounded-top" alt="Strefa dla dzieci">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-emoji-smile-fill me-2"></i>Strefa dla dzieci</h5>
+                        <p class="card-text">Kolorowe zjeżdżalnie, mini fontanny i bezpieczne brodziki dla najmłodszych.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="images/attractions/fitness.jpg" class="card-img-top rounded-top" alt="Fitness & Aqua aerobik">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="bi bi-heart-pulse-fill me-2"></i>Aqua Fitness</h5>
+                        <p class="card-text">Zajęcia ruchowe w wodzie prowadzone przez profesjonalnych trenerów.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 text-primary">Gotowy na przygodę?</h2>
+            <p class="mb-4">Zaplanuj swoją wizytę już dziś i przeżyj niesamowitą wodną przygodę z rodziną i przyjaciółmi.</p>
+            <a href="/contact" class="btn btn-primary btn-lg">
+                <i class="bi bi-calendar2-check me-2"></i>Skontaktuj się z nami
+            </a>
+        </div>
+    </section>
+</div>
+
+<style>
+    .card-img-top {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .card-title i {
+        vertical-align: middle;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+</style>
