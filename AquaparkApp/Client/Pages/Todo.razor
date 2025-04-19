@@ -1,0 +1,34 @@
+﻿// Client/Pages/Todo.razor
+@page "/todo"
+@inject HttpClient Http
+
+<h3>Todo</h3>
+
+<ul>
+    @foreach (var item in todos)
+    {
+        <li>@item.Title (@(item.IsDone ? "Done" : "Pending"))</li>
+    }
+</ul>
+
+<input @bind="newTitle" placeholder="Nowe zadanie" />
+<button @onclick="AddTodo">Dodaj</button>
+
+@code {
+    List<TodoItem> todos = new();
+    string newTitle;
+
+    protected override async Task OnInitializedAsync()
+    {
+        todos = await Http.GetFromJsonAsync<List<TodoItem>>("api/todo");
+    }
+
+    async Task AddTodo()
+    {
+        var item = new TodoItem { Title = newTitle };
+        var response = await Http.PostAsJsonAsync("api/todo", item);
+        var created = await response.Content.ReadFromJsonAsync<TodoItem>();
+        todos.Add(created);
+        newTitle = string.Empty;
+    }
+}
