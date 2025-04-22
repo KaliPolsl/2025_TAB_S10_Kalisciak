@@ -59,15 +59,15 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
-            "Blazored.LocalStorage": {
-              "target": "Package",
-              "version": "[4.5.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.4, )"
             },
             "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
               "target": "Package",
               "version": "[9.0.4, )"
             },
@@ -91,6 +91,10 @@
               "version": "[9.0.4, )"
             },
             "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.JSInterop": {
               "target": "Package",
               "version": "[9.0.4, )"
             },

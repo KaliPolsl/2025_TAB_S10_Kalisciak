@@ -47,18 +47,6 @@
           }
         }
       },
-      "Blazored.LocalStorage/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/Blazored.LocalStorage.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/Blazored.LocalStorage.dll": {}
-        }
-      },
       "BlazorPro.BlazorSize/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -2055,18 +2043,6 @@
           }
         }
       },
-      "Blazored.LocalStorage/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/Blazored.LocalStorage.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/Blazored.LocalStorage.dll": {}
-        }
-      },
       "BlazorPro.BlazorSize/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -3959,22 +3935,6 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "Blazored.LocalStorage/4.5.0": {
-      "sha512": "6nZuJwA7zNIKx83IsObiHXZb09ponJOpCClU3en+hI8ZFvrOKXeOw+H7TegQZQrvdR1n9fkrVkEBQZg8vx6ZTw==",
-      "type": "package",
-      "path": "blazored.localstorage/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "blazored.localstorage.4.5.0.nupkg.sha512",
-        "blazored.localstorage.nuspec",
-        "icon.png",
-        "lib/net6.0/Blazored.LocalStorage.dll",
-        "lib/net7.0/Blazored.LocalStorage.dll",
-        "lib/net8.0/Blazored.LocalStorage.dll"
       ]
     },
     "BlazorPro.BlazorSize/9.0.0": {
@@ -7572,14 +7532,15 @@
     "net9.0": [
       "AquaparkApp.Shared >= 1.0.0",
       "BlazorPro.BlazorSize >= 9.0.0",
-      "Blazored.LocalStorage >= 4.5.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.4",
       "Microsoft.AspNetCore.Components.Authorization >= 9.0.4",
+      "Microsoft.AspNetCore.Components.Web >= 9.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly >= 9.0.4",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 9.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "Microsoft.Extensions.Http >= 9.0.4",
+      "Microsoft.JSInterop >= 9.0.4",
       "Microsoft.NET.ILLink.Tasks >= 9.0.4",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.4"
     ]
@@ -7643,15 +7604,15 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
-          "Blazored.LocalStorage": {
-            "target": "Package",
-            "version": "[4.5.0, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[9.0.4, )"
           },
           "Microsoft.AspNetCore.Components.Authorization": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "Microsoft.AspNetCore.Components.Web": {
             "target": "Package",
             "version": "[9.0.4, )"
           },
@@ -7675,6 +7636,10 @@
             "version": "[9.0.4, )"
           },
           "Microsoft.Extensions.Http": {
+            "target": "Package",
+            "version": "[9.0.4, )"
+          },
+          "Microsoft.JSInterop": {
             "target": "Package",
             "version": "[9.0.4, )"
           },
