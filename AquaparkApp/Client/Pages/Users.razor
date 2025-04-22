@@ -1,26 +1,32 @@
-﻿@page "/users"
-@using AquaparkApp.Shared
+﻿@page "/admin/users"
+@using AquaparkApp.Client.Services
+@using Microsoft.AspNetCore.Authorization
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Roles = "Admin")]
 
+<h3>User Management</h3>
 
-<h3>Lista użytkowników</h3>
-
-@if (users == null)
+@if (loading)
 {
-    <p>Ładowanie...</p>
+    <p><em>Loading...</em></p>
+}
+else if (users == null)
+{
+    <p><em>Error loading users.</em></p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>ID</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Role</th>
-                <th>IsBlocked</th>
-                <th>CreatedAt</th>
-                <th>UpdatedAt</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -30,10 +36,42 @@ else
                     <td>@user.UserId</td>
                     <td>@user.Username</td>
                     <td>@user.Email</td>
-                    <td>@user.Role</td>
-                    <td>@(user.IsBlocked ? "Yes" : "No")</td>
-                    <td>@user.CreatedAt</td>
-                    <td>@user.UpdatedAt</td>
+                    <td>
+                        @if (editingUser != null && editingUser.UserId == user.UserId)
+                        {
+                            <select @bind="editingUser.Role" class="form-control">
+                                <option value="User">User</option>
+                                <option value="Moderator">Moderator</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        }
+                        else
+                        {
+                            @user.Role
+                        }
+                    </td>
+                    <td>@(user.IsBlocked ? "Blocked" : "Active")</td>
+                    <td>@user.CreatedAt.ToLocalTime().ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        @if (editingUser != null && editingUser.UserId == user.UserId)
+                        {
+                            <button class="btn btn-success btn-sm" @onclick="SaveUserRole">Save</button>
+                            <button class="btn btn-secondary btn-sm" @onclick="CancelEdit">Cancel</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-primary btn-sm" @onclick="() => EditUser(user)">Edit Role</button>
+                        }
+
+                        @if (user.IsBlocked)
+                        {
+                            <button class="btn btn-success btn-sm" @onclick="() => ToggleBlockUser(user.UserId, false)">Unblock</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-danger btn-sm" @onclick="() => ToggleBlockUser(user.UserId, true)">Block</button>
+                        }
+                    </td>
                 </tr>
             }
         </tbody>
@@ -41,10 +79,109 @@ else
 }
 
 @code {
-    private List<User> users;
+    private List<UserListItem> users;
+    private UserListItem editingUser;
+    private bool loading = true;
 
     protected override async Task OnInitializedAsync()
     {
-        users = await Http.GetFromJsonAsync<List<User>>("api/user");
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        try
+        {
+            loading = true;
+            users = await Http.GetFromJsonAsync<List<UserListItem>>("api/auth/users");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading users: {ex.Message}");
+        }
+        finally
+        {
+            loading = false;
+        }
+    }
+
+    private void EditUser(UserListItem user)
+    {
+        editingUser = new UserListItem
+            {
+                UserId = user.UserId,
+                Username = user.Username,
+                Email = user.Email,
+                Role = user.Role,
+                IsBlocked = user.IsBlocked,
+                CreatedAt = user.CreatedAt,
+                UpdatedAt = user.UpdatedAt
+            };
+    }
+
+    private void CancelEdit()
+    {
+        editingUser = null;
+    }
+
+    private async Task SaveUserRole()
+    {
+        if (editingUser == null) return;
+
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"api/auth/users/{editingUser.UserId}/role",
+                new { Role = editingUser.Role });
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Update the user in the list
+                var user = users.FirstOrDefault(u => u.UserId == editingUser.UserId);
+                if (user != null)
+                {
+                    user.Role = editingUser.Role;
+                }
+
+                editingUser = null;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving user role: {ex.Message}");
+        }
+    }
+
+    private async Task ToggleBlockUser(int userId, bool block)
+    {
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"api/auth/users/{userId}/block",
+                new { IsBlocked = block });
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Update the user in the list
+                var user = users.FirstOrDefault(u => u.UserId == userId);
+                if (user != null)
+                {
+                    user.IsBlocked = block;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error toggling user block status: {ex.Message}");
+        }
+    }
+
+    private class UserListItem
+    {
+        public int UserId { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Role { get; set; }
+        public bool IsBlocked { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }
