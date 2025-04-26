@@ -10,15 +10,3 @@ C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Share
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\refint\AquaparkApp.Shared.dll
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.pdb
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\ref\AquaparkApp.Shared.dll
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.deps.json
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.dll
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.pdb
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.AssemblyInfoInputs.cache
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.AssemblyInfo.cs
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.csproj.CoreCompileInputs.cache
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.sourcelink.json
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.dll
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\refint\AquaparkApp.Shared.dll
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.pdb
-C:\Users\grawe\OneDrive - Politechnika Śląska\Dokumenty\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\ref\AquaparkApp.Shared.dll

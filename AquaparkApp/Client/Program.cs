@@ -25,10 +25,5 @@ builder.Services.AddScoped(async sp =>
     return service;
 });
 
-builder.Services.AddScoped(sp => new HttpClient
-{
-    BaseAddress = new Uri("https://localhost:5001/") // Adres API backendowego
-});
-
 
 await builder.Build().RunAsync();
