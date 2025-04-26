@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj": {}
+    "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj": {
+    "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj",
+        "projectUniqueName": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj",
         "projectName": "AquaparkApp.Client",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\",
+        "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj",
+        "packagesPath": "C:\\Users\\grawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\grawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj"
+              "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj"
               }
             }
           }
@@ -132,20 +131,20 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj": {
+    "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
+        "projectUniqueName": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
         "projectName": "AquaparkApp.Server",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\obj\\",
+        "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\AquaparkApp.Server.csproj",
+        "packagesPath": "C:\\Users\\grawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\grawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -154,18 +153,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj"
+              "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj": {
+                "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Client\\AquaparkApp.Client.csproj"
               },
-              "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj"
+              "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
+                "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj"
               }
             }
           }
@@ -186,6 +184,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "BlazorPro.BlazorSize": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -222,20 +224,20 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
+    "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj",
         "projectName": "AquaparkApp.Shared",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\AquaparkApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\grawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grawe\\OneDrive - Politechnika Śląska\\Dokumenty\\GitHub\\2025_TAB_S10_Kalisciak\\AquaparkApp\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\grawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -244,7 +246,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
