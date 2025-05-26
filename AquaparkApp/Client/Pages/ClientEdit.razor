@@ -1,0 +1,245 @@
+﻿// Plik: Pages/ClientEdit.razor
+@page "/klient-edit/{KlientId:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using AquaparkApp.Shared.Models // Upewnij się, że to poprawny namespace dla Klient
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<PageTitle>Edycja Klienta</PageTitle>
+
+<div class="container mt-4">
+    @if (klientToEdit == null && !loadFailed && isLoading)
+    {
+        <div class="text-center">
+            <p><em>Ładowanie danych klienta do edycji...</em></p>
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else if (loadFailed)
+    {
+        <div class="alert alert-danger" role="alert">
+            @errorMessage
+            <button class="btn btn-sm btn-outline-secondary mt-2" @onclick="GoBackToList">Wróć do Zarządzania Klientami</button>
+        </div>
+    }
+    else if (klientToEdit != null)
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-warning text-dark">
+                <h3>Edytuj Dane Klienta: @klientToEdit.Imię @klientToEdit.Nazwisko (ID: @klientToEdit.Id)</h3>
+            </div>
+            <div class="card-body">
+                <EditForm Model="@klientToEdit" OnValidSubmit="HandleUpdateKlientSubmit">
+                    <DataAnnotationsValidator />
+
+                    <div class="mb-3">
+                        <label for="editImie" class="form-label">Imię:</label>
+                        <InputText id="editImie" class="form-control" @bind-Value="klientToEdit.Imię" />
+                        <ValidationMessage For="@(() => klientToEdit.Imię)" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editNazwisko" class="form-label">Nazwisko:</label>
+                        <InputText id="editNazwisko" class="form-control" @bind-Value="klientToEdit.Nazwisko" />
+                        <ValidationMessage For="@(() => klientToEdit.Nazwisko)" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editNrTelefonu" class="form-label">Numer telefonu (opcjonalnie):</label>
+                        <InputText id="editNrTelefonu" class="form-control" @bind-Value="klientToEdit.NrTelefonu" />
+                        <ValidationMessage For="@(() => klientToEdit.NrTelefonu)" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editEmail" class="form-label">Email (opcjonalnie):</label>
+                        <InputText id="editEmail" type="email" class="form-control" @bind-Value="klientToEdit.Email" />
+                        <ValidationMessage For="@(() => klientToEdit.Email)" />
+                    </div>
+
+                    @if (!string.IsNullOrWhiteSpace(updateErrorMessage))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @updateErrorMessage
+                        </div>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(updateSuccessMessage))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @updateSuccessMessage
+                        </div>
+                    }
+
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-success me-2" disabled="@isSubmittingUpdate">
+                            @if (isSubmittingUpdate)
+                            {
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                <span class="visually-hidden">Zapisywanie...</span>
+                            }
+                            else
+                            {
+                                <i class="bi bi-save">Zapisz Zmiany</i>
+                                
+                                    }
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" @onclick="GoBackToProfileOrList">
+                            <i class="bi bi-x-circle"></i> Anuluj
+                        </button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    }
+    else if (!isLoading)
+    {
+        <div class="alert alert-warning" role="alert">
+            Nie znaleziono klienta o ID: @KlientId.
+            <button class="btn btn-sm btn-outline-secondary mt-2" @onclick="GoBackToList">Wróć do Zarządzania Klientami</button>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int KlientId { get; set; }
+
+    private Klient? klientToEdit; // Obiekt klienta do edycji
+    private bool isLoading = true;
+    private bool loadFailed = false;
+    private string? errorMessage; // Ogólny błąd ładowania
+    private bool isSubmittingUpdate = false;
+    private string? updateErrorMessage;
+    private string? updateSuccessMessage;
+
+    private JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve,
+            PropertyNameCaseInsensitive = true
+        };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadKlientForEdit();
+    }
+
+    private async Task LoadKlientForEdit()
+    {
+        isLoading = true;
+        loadFailed = false;
+        klientToEdit = null;
+        errorMessage = null;
+        StateHasChanged();
+
+        if (KlientId <= 0)
+        {
+            errorMessage = "Nieprawidłowy identyfikator klienta.";
+            loadFailed = true;
+            isLoading = false;
+            return;
+        }
+
+        try
+        {
+            var response = await Http.GetAsync($"api/Klient/{KlientId}");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                klientToEdit = JsonSerializer.Deserialize<Klient>(jsonString, jsonSerializerOptions);
+            }
+            else
+            {
+                errorMessage = $"Nie można załadować danych klienta ({(int)response.StatusCode}).";
+                loadFailed = true;
+                Console.WriteLine($"Błąd API (GetKlient for Edit): {response.StatusCode} - {await response.Content.ReadAsStringAsync()}");
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Wystąpił błąd podczas ładowania danych klienta: {ex.Message}";
+            loadFailed = true;
+            Console.WriteLine($"Wyjątek (LoadKlientForEdit): {ex}");
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task HandleUpdateKlientSubmit()
+    {
+        if (klientToEdit == null) return;
+
+        isSubmittingUpdate = true;
+        updateErrorMessage = null;
+        updateSuccessMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"api/Klient/{klientToEdit.Id}", klientToEdit);
+
+            if (response.IsSuccessStatusCode)
+            {
+                updateSuccessMessage = "Dane klienta zostały pomyślnie zaktualizowane.";
+                // Opcjonalnie: Nawiguj z powrotem do profilu po chwili
+                await Task.Delay(2000); // Daj użytkownikowi czas na przeczytanie komunikatu
+                NavigationManager.NavigateTo($"/klient-profile/{klientToEdit.Id}");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest && !string.IsNullOrWhiteSpace(errorContent))
+                {
+                    try
+                    {
+                        var validationErrors = JsonSerializer.Deserialize<Dictionary<string, string[]>>(errorContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                        if (validationErrors != null && validationErrors.TryGetValue("errors", out var errorsNode))
+                        {
+                            updateErrorMessage = "Błąd walidacji: " + string.Join("; ", errorsNode.SelectMany(e => e));
+                        }
+                        else if (validationErrors != null && validationErrors.Any())
+                        {
+                            updateErrorMessage = "Błąd walidacji: " + string.Join("; ", validationErrors.Select(kvp => $"{kvp.Key}: {string.Join(", ", kvp.Value)}"));
+                        }
+                        else
+                        {
+                            updateErrorMessage = $"Błąd podczas aktualizacji ({(int)response.StatusCode}): {errorContent.Substring(0, Math.Min(errorContent.Length, 200))}";
+                        }
+                    }
+                    catch
+                    {
+                        updateErrorMessage = $"Błąd podczas aktualizacji ({(int)response.StatusCode}): {errorContent.Substring(0, Math.Min(errorContent.Length, 200))}";
+                    }
+                }
+                else
+                {
+                    updateErrorMessage = $"Błąd serwera podczas aktualizacji ({(int)response.StatusCode}): {response.ReasonPhrase}";
+                }
+                Console.WriteLine($"Błąd API (PutKlient): {response.StatusCode} - {errorContent}");
+            }
+        }
+        catch (Exception ex)
+        {
+            updateErrorMessage = $"Wystąpił nieoczekiwany błąd: {ex.Message}";
+            Console.WriteLine($"Wyjątek (PutKlient): {ex}");
+        }
+        finally
+        {
+            isSubmittingUpdate = false;
+            StateHasChanged();
+        }
+    }
+
+    private void GoBackToProfileOrList()
+    {
+        // Możesz zdecydować, czy wracać do profilu (jeśli przyszedł z profilu) czy do listy.
+        // Na razie prosty powrót do listy.
+        NavigationManager.NavigateTo("/manage-clients");
+    }
+    private void GoBackToList()
+    {
+        NavigationManager.NavigateTo("/manage-clients");
+    }
+}

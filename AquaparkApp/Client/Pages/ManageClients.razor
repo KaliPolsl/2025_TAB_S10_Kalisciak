@@ -1,0 +1,306 @@
+﻿// Plik: Pages/ManageClients.razor
+@page "/manage-clients"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using AquaparkApp.Shared.Models 
+@using AquaparkApp.Shared.Dtos
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Text.Json // Dla JsonSerializer i JsonSerializerOptions
+@using System.Text.Json.Serialization // Dla ReferenceHandler
+@implements IDisposable // Dla Timer
+
+<PageTitle>Zarządzanie Klientami</PageTitle>
+
+<div class="container mt-4">
+    <h1>Zarządzanie Klientami</h1>
+    <hr />
+
+    <!-- Sekcja Dodawania Nowego Klienta -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4>Dodaj Nowego Klienta</h4>
+        </div>
+        <div class="card-body">
+            <EditForm Model="@newKlient" OnValidSubmit="HandleNewKlientSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="mb-3">
+                    <label for="imie" class="form-label">Imię:</label>
+                    <InputText id="imie" class="form-control" @bind-Value="newKlient.Imię" />
+                    <ValidationMessage For="@(() => newKlient.Imię)" />
+                </div>
+                <div class="mb-3">
+                    <label for="nazwisko" class="form-label">Nazwisko:</label>
+                    <InputText id="nazwisko" class="form-control" @bind-Value="newKlient.Nazwisko" />
+                    <ValidationMessage For="@(() => newKlient.Nazwisko)" />
+                </div>
+                <div class="mb-3">
+                    <label for="nrTelefonu" class="form-label">Numer telefonu (opcjonalnie):</label>
+                    <InputText id="nrTelefonu" class="form-control" @bind-Value="newKlient.NrTelefonu" />
+                    <ValidationMessage For="@(() => newKlient.NrTelefonu)" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email (opcjonalnie):</label>
+                    <InputText id="email" type="email" class="form-control" @bind-Value="newKlient.Email" />
+                    <ValidationMessage For="@(() => newKlient.Email)" />
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(newKlientErrorMessage))
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @newKlientErrorMessage
+                    </div>
+                }
+                @if (!string.IsNullOrWhiteSpace(newKlientSuccessMessage))
+                {
+                    <div class="alert alert-success" role="alert">
+                        @newKlientSuccessMessage
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-success" disabled="@isSubmittingNewKlient">
+                    @if (isSubmittingNewKlient)
+                    {
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Dodawanie...</span>
+                    }
+                    else
+                    {
+                        <i class="bi bi-plus-circle">Dodaj Klienta</i>
+                        
+                        }
+                </button>
+            </EditForm>
+        </div>
+    </div>
+
+    <!-- Sekcja Wyszukiwania Klientów -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h4>Wyszukaj Klienta</h4>
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <InputText @bind-Value="searchTerm" class="form-control" placeholder="Wpisz imię, nazwisko, telefon, email lub ID" @oninput="HandleSearchInput" />
+                <button class="btn btn-outline-secondary" type="button" @onclick="SearchKlienciAsync" disabled="@isSearching">
+                    @if (isSearching)
+                    {
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        <span class="visually-hidden">Szukanie...</span>
+                    }
+                    else
+                    {
+                        <i class="bi bi-search">Szukaj</i>
+                        
+                            }
+                </button>
+            </div>
+
+            @if (isSearching && (searchResults == null || !searchResults.Any()))
+            {
+                <div class="text-center">
+                    <div class="spinner-border text-info" role="status">
+                        <span class="visually-hidden">Szukanie...</span>
+                    </div>
+                </div>
+            }
+            else if (searchAttempted && (searchResults == null || !searchResults.Any()))
+            {
+                <div class="alert alert-warning" role="alert">
+                    Nie znaleziono klientów pasujących do kryteriów wyszukiwania.
+                </div>
+            }
+            else if (searchResults != null && searchResults.Any())
+            {
+                <h5>Wyniki Wyszukiwania:</h5>
+                <ul class="list-group">
+                    @foreach (var klient in searchResults)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>@klient.Imię @klient.Nazwisko</strong><br />
+                                <small class="text-muted">ID: @klient.Id, Tel: @(klient.NrTelefonu ?? "-"), Email: @(klient.Email ?? "-")</small>
+                            </div>
+                            <div>
+                                <button class="btn btn-sm btn-primary me-2" @onclick="() => GoToKlientProfile(klient.Id)">
+                                    <i class="bi bi-person-lines-fill"></i> Profil
+                                </button>
+                                <button class="btn btn-sm btn-warning me-2" @onclick="() => GoToKlientEdit(klient.Id)">
+                                    <i class="bi bi-pencil-square"></i> Edytuj
+                                </button>
+                                <button class="btn btn-sm btn-success" @onclick="() => GoToSprzedazDlaKlienta(klient.Id)">
+                                    <i class="bi bi-cart-plus"></i> Sprzedaż
+                                </button>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private Klient newKlient = new Klient();
+    private string? searchTerm;
+    private List<Klient>? searchResults;
+    private bool isSubmittingNewKlient = false;
+    private bool isSearching = false;
+    private bool searchAttempted = false; // Aby pokazać "nie znaleziono" tylko po próbie wyszukiwania
+    private string? newKlientErrorMessage;
+    private string? newKlientSuccessMessage;
+
+    private Timer? _debounceTimer;
+    private readonly int _debounceTimeoutMs = 500; // Czas opóźnienia w milisekundach
+
+    // Opcje serializatora JSON do obsługi cyklicznych referencji
+    private JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve,
+            PropertyNameCaseInsensitive = true // Dobra praktyka przy komunikacji z API
+        };
+
+    private async Task HandleNewKlientSubmit()
+    {
+        isSubmittingNewKlient = true;
+        newKlientErrorMessage = null;
+        newKlientSuccessMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            // Serializacja obiektu newKlient do JSON (HttpClient zrobi to automatycznie)
+            var response = await Http.PostAsJsonAsync("api/Klient", newKlient);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Deserializacja odpowiedzi z opcjami obsługującymi cykle
+                var createdKlientJson = await response.Content.ReadAsStringAsync();
+                var createdKlient = JsonSerializer.Deserialize<Klient>(createdKlientJson, jsonSerializerOptions);
+
+                newKlientSuccessMessage = $"Pomyślnie dodano klienta: {createdKlient?.Imię} {createdKlient?.Nazwisko} (ID: {createdKlient?.Id})";
+                newKlient = new Klient(); // Wyczyść formularz
+                await SearchKlienciAsync(); // Odśwież listę, jeśli nowo dodany klient pasuje do kryteriów
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest && !string.IsNullOrWhiteSpace(errorContent))
+                {
+                    // Prosta próba odczytania błędów walidacji (można to ulepszyć)
+                    try
+                    {
+                        var validationErrors = JsonSerializer.Deserialize<Dictionary<string, string[]>>(errorContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                        if (validationErrors != null && validationErrors.TryGetValue("errors", out var errorsNode))
+                        {
+                            // To jest bardziej złożone, API zwraca obiekt z polem "errors"
+                            // Prostsze może być po prostu wyświetlenie `errorContent`
+                            newKlientErrorMessage = "Błąd walidacji: " + string.Join("; ", errorsNode.SelectMany(e => e));
+                        }
+                        else if (validationErrors != null && validationErrors.Any())
+                        {
+                            newKlientErrorMessage = "Błąd walidacji: " + string.Join("; ", validationErrors.Select(kvp => $"{kvp.Key}: {string.Join(", ", kvp.Value)}"));
+                        }
+                        else
+                        {
+                            newKlientErrorMessage = $"Błąd podczas dodawania klienta ({(int)response.StatusCode}): {errorContent.Substring(0, Math.Min(errorContent.Length, 200))}";
+                        }
+                    }
+                    catch
+                    {
+                        newKlientErrorMessage = $"Błąd podczas dodawania klienta ({(int)response.StatusCode}): {errorContent.Substring(0, Math.Min(errorContent.Length, 200))}";
+                    }
+                }
+                else
+                {
+                    newKlientErrorMessage = $"Błąd serwera ({(int)response.StatusCode}): {response.ReasonPhrase}";
+                }
+                Console.WriteLine($"Błąd API (PostKlient): {response.StatusCode} - {errorContent}");
+            }
+        }
+        catch (Exception ex)
+        {
+            newKlientErrorMessage = $"Wystąpił nieoczekiwany błąd: {ex.Message}";
+            Console.WriteLine($"Wyjątek (PostKlient): {ex}");
+        }
+        finally
+        {
+            isSubmittingNewKlient = false;
+            StateHasChanged();
+        }
+    }
+
+    private void HandleSearchInput(ChangeEventArgs e)
+    {
+        searchTerm = e.Value?.ToString();
+        _debounceTimer?.Dispose();
+        _debounceTimer = new Timer(async _ =>
+        {
+            // Wywołanie metody, która jest async void musi być w InvokeAsync
+            await InvokeAsync(SearchKlienciAsync);
+        }, null, _debounceTimeoutMs, Timeout.Infinite);
+    }
+
+    // Zmieniono nazwę, aby odróżnić od potencjalnej metody synchronicznej
+    private async Task SearchKlienciAsync()
+    {
+        _debounceTimer?.Dispose(); // Anuluj timer, jeśli wyszukiwanie jest wywoływane bezpośrednio (np. przez przycisk)
+
+        if (string.IsNullOrWhiteSpace(searchTerm))
+        {
+            searchResults = null;
+            searchAttempted = false; // Resetuj flagę próby wyszukiwania
+            StateHasChanged();
+            return;
+        }
+
+        isSearching = true;
+        searchAttempted = true;
+        StateHasChanged();
+
+        try
+        {
+            var response = await Http.GetAsync($"api/Klient?searchTerm={Uri.EscapeDataString(searchTerm)}");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                searchResults = JsonSerializer.Deserialize<List<Klient>>(jsonString, jsonSerializerOptions);
+            }
+            else
+            {
+                Console.WriteLine($"Błąd API (SearchKlienci): {response.StatusCode} - {await response.Content.ReadAsStringAsync()}");
+                searchResults = new List<Klient>(); // Pusta lista w przypadku błędu z API
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Wyjątek (SearchKlienci): {ex}");
+            searchResults = new List<Klient>(); // Pusta lista w przypadku ogólnego błędu
+        }
+        finally
+        {
+            isSearching = false;
+            StateHasChanged();
+        }
+    }
+
+    private void GoToKlientProfile(int klientId)
+    {
+        NavigationManager.NavigateTo($"/klient-profile/{klientId}");
+    }
+
+    private void GoToSprzedazDlaKlienta(int klientId)
+    {
+        NavigationManager.NavigateTo($"/sprzedaz/{klientId}");
+    }
+
+    public void Dispose()
+    {
+        _debounceTimer?.Dispose();
+    }
+
+    private void GoToKlientEdit(int klientId)
+    {
+        NavigationManager.NavigateTo($"/klient-edit/{klientId}");
+    }
+}

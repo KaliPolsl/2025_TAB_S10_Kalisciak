@@ -1,65 +1,81 @@
-﻿@page "/attractions"
-@using AquaparkApp.Shared
-@using AquaparkApp.Client.Services
-@inject AtrakcjaService AtrakcjaService
+﻿// Plik: Pages/Attractions.razor
+@page "/attractions"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager // Odkomentuj, jeśli dodasz nawigację
+@using AquaparkApp.Shared.Models // Upewnij się, że modele są tutaj
+@using System.Text.Json // Dla JsonSerializer i JsonSerializerOptions
+@using System.Text.Json.Serialization // Dla ReferenceHandler
 
-<div class="container-fluid px-4 py-5 attractions-page">
-    <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold text-primary">Nasze Atrakcje</h1>
-        <p class="lead">Odkryj wodny świat pełen zabawy i relaksu</p>
+
+<PageTitle>Atrakcje - Aquapark</PageTitle>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Nasze Atrakcje</h1>
+        @* <button class="btn btn-primary" @onclick="NavigateToCreateAttraction">Dodaj Nową Atrakcję</button> *@
     </div>
 
-    @if (atrakcje == null)
+    @if (isLoading) // Zmieniono warunek, aby pokazywać spinner podczas ładowania
     {
-        <div class="text-center my-5">
+        <div class="text-center">
+            <p><em>Ładowanie atrakcji...</em></p>
             <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Ładowanie...</span>
+                <span class="visually-hidden">Loading...</span>
             </div>
-            <p class="mt-2">Ładowanie atrakcji...</p>
         </div>
     }
-    else if (atrakcje.Count == 0)
+    else if (loadFailed)
     {
-        <div class="alert alert-warning text-center">
-            <h4>Brak dostępnych atrakcji</h4>
-            <p>Przepraszamy, obecnie nie ma dostępnych atrakcji.</p>
+        <div class="alert alert-danger" role="alert">
+            Wystąpił błąd podczas ładowania atrakcji. Spróbuj ponownie później.
+        </div>
+    }
+    else if (atrakcje == null || !atrakcje.Any()) // Sprawdź też `atrakcje == null` po załadowaniu
+    {
+        <div class="alert alert-info" role="alert">
+            Obecnie nie mamy dostępnych informacji o atrakcjach.
         </div>
     }
     else
     {
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            @foreach (var a in atrakcje)
+            @foreach (var atrakcja in atrakcje)
             {
                 <div class="col">
                     <div class="card h-100 shadow-sm">
-                        <div class="card-img-top-container">
-                            <img src="@GetImageForAttraction(a.Nazwa)"
-                                 class="card-img-top"
-                                 alt="@a.Nazwa"
-                                 loading="lazy">
-                            @if (a.WymagaDodatkowejOplaty)
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">@atrakcja.Nazwa</h5>
+                            @if (!string.IsNullOrWhiteSpace(atrakcja.Opis))
                             {
-                                <span class="badge bg-danger position-absolute top-0 end-0 m-2">
-                                    Dodatkowa opłata: @($"{a.CenaDodatkowa:F2} zł")
-                                </span>
+                                <p class="card-text flex-grow-1">@atrakcja.Opis</p>
                             }
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title text-primary">@a.Nazwa</h3>
-                            <p class="card-text">@a.Opis</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="badge bg-info text-dark">
-                                    <i class="bi bi-people-fill"></i> Maks. osób: @a.MaxOsób
-                                </span>
-                                @if (!a.WymagaDodatkowejOplaty)
+                            else
+                            {
+                                <p class="card-text flex-grow-1"><em>Brak szczegółowego opisu.</em></p>
+                            }
+                            <ul class="list-group list-group-flush mt-auto">
+                                <li class="list-group-item">Maksymalna liczba osób: @atrakcja.MaxOsób</li>
+                                @if (atrakcja.WymagaDodatkowejOplaty)
                                 {
-                                    <span class="badge bg-success">
-                                        <i class="bi bi-check-circle"></i> Wliczone w cenę
-                                    </span>
+                                    <li class="list-group-item text-danger">
+                                        Wymaga dodatkowej opłaty:
+                                        @if (atrakcja.CenaDodatkowa.HasValue)
+                                        {
+                                            <strong>@atrakcja.CenaDodatkowa.Value.ToString("C", new System.Globalization.CultureInfo("pl-PL"))</strong>
+                                        }
+                                        else
+                                        {
+                                            <strong>Tak</strong>
+                                        }
+                                    </li>
                                 }
-                            </div>
+                                else
+                                {
+                                    <li class="list-group-item text-success">Wstęp w cenie biletu</li>
+                                }
+                            </ul>
+                            @* Zakomentowane przyciski CRUD *@
                         </div>
-                        
                     </div>
                 </div>
             }
@@ -69,25 +85,64 @@
 
 @code {
     private List<Atrakcja>? atrakcje;
+    private bool isLoading = true; // Domyślnie true, aby pokazać spinner od razu
+    private bool loadFailed = false;
+
+    // Opcje serializatora JSON, na wypadek gdyby AtrakcjaController zwracał dane z cyklami
+    // (co nie powinno mieć miejsca, jeśli nie ma .Include() w GetAtrakcje())
+    private JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+    {
+        ReferenceHandler = ReferenceHandler.Preserve,
+        PropertyNameCaseInsensitive = true
+    };
 
     protected override async Task OnInitializedAsync()
     {
-        atrakcje = await AtrakcjaService.GetAtrakcjeAsync();
+        await LoadAtrakcjeAsync();
     }
 
-    private string GetImageForAttraction(string nazwaAtrakcji)
+    private async Task LoadAtrakcjeAsync()
     {
-        // Możesz zastąpić te linki własnymi zdjęciami lub użyć lokalnych plików
-        return nazwaAtrakcji.ToLower() switch
+        isLoading = true;
+        loadFailed = false;
+        // Nie resetuj atrakcje = null tutaj, jeśli chcesz zachować poprzednie dane podczas odświeżania
+        // Ale dla pierwszego ładowania lub jeśli odświeżenie ma wyczyścić, to jest OK.
+        // atrakcje = null;
+        StateHasChanged(); // Pokaż spinner
+
+        try
         {
-            "Basen Rekreacyjny" => "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            "Sauna Parowa" => "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            "Jacuzzi" => "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            "Basen Sportowy" => "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            "Strefa Relaksu" => "https://images.unsplash.com/photo-1582123387346-4fc0a1fb2b0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-            _ => "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        };
+            // Sprawdź, czy AtrakcjaController.GetAtrakcje() zwraca dane z cyklami.
+            // Jeśli nie (co jest prawdopodobne dla prostej listy), możesz wrócić do:
+            // atrakcje = await Http.GetFromJsonAsync<List<Atrakcja>>("api/Atrakcja");
+
+            // Jeśli JEST ryzyko cykli lub chcesz być spójny z ManageClients:
+            var response = await Http.GetAsync("api/Atrakcja");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                atrakcje = JsonSerializer.Deserialize<List<Atrakcja>>(jsonString, jsonSerializerOptions);
+            }
+            else
+            {
+                Console.WriteLine($"Błąd API (LoadAtrakcje): {response.StatusCode} - {await response.Content.ReadAsStringAsync()}");
+                loadFailed = true;
+                atrakcje = new List<Atrakcja>(); // Pusta lista w przypadku błędu
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Błąd podczas ładowania atrakcji: {ex.Message}");
+            loadFailed = true;
+            atrakcje = new List<Atrakcja>();
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged(); // Zaktualizuj UI po zakończeniu
+        }
     }
 
-   
+    // Zakomentowane przykładowe metody CRUD, jeśli będziesz je dodawał
+    // ...
 }

@@ -1,0 +1,197 @@
+﻿// Plik: Pages/ClientProfile.razor
+@page "/klient-profile/{KlientId:int}"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using AquaparkApp.Shared.Models // Upewnij się, że to poprawny namespace
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<PageTitle>Profil Klienta - @(klient?.Imię ?? "") @(klient?.Nazwisko ?? "")</PageTitle>
+
+<div class="container mt-4">
+    @if (klient == null && !loadFailed && isLoading) // Dodano isLoading
+    {
+        <div class="text-center">
+            <p><em>Ładowanie profilu klienta...</em></p>
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else if (loadFailed)
+    {
+        <div class="alert alert-danger" role="alert">
+            Wystąpił błąd podczas ładowania profilu klienta. Upewnij się, że ID klienta jest poprawne lub spróbuj ponownie później.
+            <button class="btn btn-sm btn-outline-secondary mt-2" @onclick="GoBack">Wróć do Zarządzania Klientami</button>
+        </div>
+    }
+    else if (klient != null)
+    {
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Profil Klienta: @klient.Imię @klient.Nazwisko</h3>
+            </div>
+            <div class="card-body">
+                <h4>Dane Podstawowe</h4>
+                <dl class="row">
+                    <dt class="col-sm-3">ID Klienta:</dt>
+                    <dd class="col-sm-9">@klient.Id</dd>
+
+                    <dt class="col-sm-3">Imię:</dt>
+                    <dd class="col-sm-9">@(klient.Imię ?? "-")</dd>
+
+                    <dt class="col-sm-3">Nazwisko:</dt>
+                    <dd class="col-sm-9">@(klient.Nazwisko ?? "-")</dd>
+
+                    <dt class="col-sm-3">Numer telefonu:</dt>
+                    <dd class="col-sm-9">@(klient.NrTelefonu ?? "-")</dd>
+
+                    <dt class="col-sm-3">Email:</dt>
+                    <dd class="col-sm-9">@(klient.Email ?? "-")</dd>
+                </dl>
+                <hr />
+
+                <h4>Historia Zakupów</h4>
+                @if (klient.ProduktZakupionies == null || !klient.ProduktZakupionies.Any()) // Zmieniono na ProduktZakupionies
+                {
+                    <p><em>Brak historii zakupów.</em></p>
+                }
+                else
+                {
+                    <ul class="list-group mb-3">
+                        @foreach (var produkt in klient.ProduktZakupionies.OrderByDescending(p => p.DataZakupu)) // Zmieniono na ProduktZakupionies
+                        {
+                            <li class="list-group-item">
+                                @* Upewnij się, że ProduktZakupiony ma właściwość nawigacyjną do OfertaCennikowa, np. "Oferta" *@
+                                @(produkt.Oferta?.NazwaOferty ?? "Nieznana oferta") (@produkt.DataZakupu.ToString("yyyy-MM-dd HH:mm")) - Cena: @produkt.CenaZakupu.ToString("C")
+                                <br /><small>Status: @produkt.Status, Pozostało wejść: @(produkt.PozostaloWejsc?.ToString() ?? "-")</small>
+                            </li>
+                        }
+                    </ul>
+                }
+                <hr />
+
+                <h4>Historia Wizyt</h4>
+                @* W Twojej klasie Klient kolekcja wizyt nazywa się "Wizyta" (powinna być "Wizyty" lub "WizytaLista" i zawierać Wizytum) *@
+                @if (klient.Wizyta == null || !klient.Wizyta.Any()) // Używam "Wizyta" jak w Twojej klasie Klient
+                {
+                    <p><em>Brak historii wizyt.</em></p>
+                }
+                else
+                {
+                    <ul class="list-group">
+                        @* Zakładam, że klient.Wizyta to ICollection<Wizytum> *@
+                        @foreach (var wizyta in klient.Wizyta.OrderByDescending(w => w.CzasWejscia))
+                        {
+                            <li class="list-group-item">
+                                Wejście: @wizyta.CzasWejscia.ToString("yyyy-MM-dd HH:mm")
+                                @if (wizyta.CzasWyjscia.HasValue)
+                                {
+                                    <span> - Wyjście: @wizyta.CzasWyjscia.Value.ToString("yyyy-MM-dd HH:mm")</span>
+                                }
+                                @* Upewnij się, że Wizytum ma właściwość nawigacyjną do StatusWizyty, np. "StatusWizyty" *@
+                                <br /><small>Status: @(wizyta.StatusWizyty?.Nazwa ?? "Nieznany status"), Opaska ID: @wizyta.OpaskaId</small>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+            <div class="card-footer">
+                
+                <button class="btn btn-primary ms-2" @onclick="() => EditKlient(klient.Id)">
+                    <i class="bi bi-pencil-square"></i> Edytuj Dane Klienta
+                </button>
+                <button class="btn btn-outline-secondary" @onclick="GoBack"><i class="bi bi-arrow-left-circle"></i> Wróć</button>
+            </div>
+        </div>
+    }
+    else if (!isLoading) // Jeśli nie ładuje i klient jest null (a nie było błędu wcześniej)
+    {
+        <div class="alert alert-warning" role="alert">
+            Nie znaleziono klienta o podanym ID.
+            <button class="btn btn-sm btn-outline-secondary mt-2" @onclick="GoBack">Wróć do Zarządzania Klientami</button>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int KlientId { get; set; }
+
+    private Klient? klient;
+    private bool loadFailed = false;
+    private bool isLoading = true;
+
+    // Stwórz instancję JsonSerializerOptions Z TĄ KONFIGURACJĄ
+    private JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve,
+            PropertyNameCaseInsensitive = true // Dobra praktyka, dopasowuje nazwy właściwości niezależnie od wielkości liter
+        };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Console.WriteLine($"ClientProfile - OnParametersSetAsync - KlientId: {KlientId}"); // Logowanie
+        await LoadKlientData();
+    }
+
+    private async Task LoadKlientData()
+    {
+        isLoading = true;
+        loadFailed = false;
+        klient = null;
+        // StateHasChanged(); // Usunięte, OnParametersSetAsync i await zajmą się odświeżeniem
+
+        if (KlientId <= 0)
+        {
+            Console.WriteLine($"Nieprawidłowe KlientId w LoadKlientData: {KlientId}");
+            loadFailed = true;
+            isLoading = false;
+            return;
+        }
+
+        try
+        {
+            Console.WriteLine($"ClientProfile - Próba pobrania klienta ID: {KlientId} z API: api/Klient/{KlientId}");
+            // 1. Użyj GetAsync, aby pobrać HttpResponseMessage
+            var response = await Http.GetAsync($"api/Klient/{KlientId}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // 2. Odczytaj zawartość odpowiedzi jako string
+                var jsonString = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"ClientProfile - Otrzymano JSON: {jsonString.Substring(0, Math.Min(jsonString.Length, 500))}"); // Loguj fragment JSON
+
+                // 3. Deserializuj string JSON używając skonfigurowanych opcji
+                klient = JsonSerializer.Deserialize<Klient>(jsonString, jsonSerializerOptions);
+                Console.WriteLine($"ClientProfile - Deserializacja udana dla KlientId: {KlientId}");
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"ClientProfile - Błąd API ({response.StatusCode}) dla KlientId: {KlientId}. Treść: {errorContent}");
+                loadFailed = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ClientProfile - Wyjątek podczas ładowania profilu klienta (ID: {KlientId}): {ex.ToString()}");
+            loadFailed = true;
+        }
+        finally
+        {
+            isLoading = false;
+            // StateHasChanged(); // Usunięte, OnParametersSetAsync i await zajmą się odświeżeniem
+        }
+    }
+    // W @code ClientProfile.razor
+    private void EditKlient(int klientId)
+    {
+        NavigationManager.NavigateTo($"/klient-edit/{klientId}");
+    }
+
+    private void GoBack()
+    {
+        NavigationManager.NavigateTo("/manage-clients");
+    }
+}

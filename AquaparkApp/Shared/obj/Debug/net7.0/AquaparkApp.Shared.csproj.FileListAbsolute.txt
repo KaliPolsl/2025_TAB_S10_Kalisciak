@@ -10,3 +10,16 @@ C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Share
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\refint\AquaparkApp.Shared.dll
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.pdb
 C:\Users\Administrator\Documents\GitHub\2025_TAB_S10_Kalisciak\AquaparkApp\Shared\obj\Debug\net7.0\ref\AquaparkApp.Shared.dll
+D:\aqua\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.deps.json
+D:\aqua\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.dll
+D:\aqua\AquaparkApp\Shared\bin\Debug\net7.0\AquaparkApp.Shared.pdb
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.AssemblyInfoInputs.cache
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.AssemblyInfo.cs
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.csproj.CoreCompileInputs.cache
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.sourcelink.json
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.dll
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\refint\AquaparkApp.Shared.dll
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.pdb
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\ref\AquaparkApp.Shared.dll
+D:\aqua\AquaparkApp\Shared\obj\Debug\net7.0\AquaparkApp.Shared.csproj.AssemblyReference.cache

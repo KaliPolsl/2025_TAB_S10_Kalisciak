@@ -15,10 +15,10 @@ builder.Services.AddHttpClient("AquaparkApp.ServerAPI", client => client.BaseAdd
 builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("AquaparkApp.ServerAPI"));
 
 
+
+
 builder.Services.AddScoped<BrowserWindowSizeProvider>();
 
-
-builder.Services.AddScoped<AtrakcjaService>();
 
 // Inicjalizacja serwisu po uruchomieniu aplikacji
 builder.Services.AddScoped(async sp =>
