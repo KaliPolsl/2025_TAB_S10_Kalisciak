@@ -17,6 +17,9 @@ builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().Cre
 
 builder.Services.AddScoped<BrowserWindowSizeProvider>();
 
+
+builder.Services.AddScoped<AtrakcjaService>();
+
 // Inicjalizacja serwisu po uruchomieniu aplikacji
 builder.Services.AddScoped(async sp =>
 {

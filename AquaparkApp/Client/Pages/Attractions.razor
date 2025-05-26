@@ -1,93 +1,93 @@
 ﻿@page "/attractions"
+@using AquaparkApp.Shared
+@using AquaparkApp.Client.Services
+@inject AtrakcjaService AtrakcjaService
 
-<div class="attractions-page">
+<div class="container-fluid px-4 py-5 attractions-page">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">Nasze Atrakcje</h1>
+        <p class="lead">Odkryj wodny świat pełen zabawy i relaksu</p>
+    </div>
 
-    <!-- Header -->
-    <section class="py-5 bg-light mb-5">
-        <div class="container text-center">
-            <h1 class="mb-3 text-primary">Nasze Atrakcje</h1>
-            <p class="lead">Odkryj wszystko, co oferuje nasz aquapark – zjeżdżalnie, baseny, strefy relaksu i więcej!</p>
+    @if (atrakcje == null)
+    {
+        <div class="text-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Ładowanie...</span>
+            </div>
+            <p class="mt-2">Ładowanie atrakcji...</p>
         </div>
-    </section>
-
-    <!-- Attractions Grid -->
-    <section class="container mb-5">
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="images/attractions/slide.jpg" class="card-img-top rounded-top" alt="Zjeżdżalnie">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="bi bi-lightning-charge-fill me-2"></i>Zjeżdżalnie</h5>
-                        <p class="card-text">Dla fanów adrenaliny – szybkie i zakręcone zjeżdżalnie dla dzieci i dorosłych.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="images/attractions/wavepool.jpg" class="card-img-top rounded-top" alt="Basen z falami">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="bi bi-water me-2"></i>Basen z falami</h5>
-                        <p class="card-text">Poczuj się jak nad morzem dzięki realistycznym falom w naszym specjalnym basenie.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="images/attractions/spa.jpg" class="card-img-top rounded-top" alt="Strefa relaksu">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="bi bi-spa me-2"></i>Strefa relaksu</h5>
-                        <p class="card-text">Sauny, jacuzzi i aromaterapia – idealne miejsce na regenerację i odpoczynek.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="images/attractions/kids.jpg" class="card-img-top rounded-top" alt="Strefa dla dzieci">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="bi bi-emoji-smile-fill me-2"></i>Strefa dla dzieci</h5>
-                        <p class="card-text">Kolorowe zjeżdżalnie, mini fontanny i bezpieczne brodziki dla najmłodszych.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="images/attractions/fitness.jpg" class="card-img-top rounded-top" alt="Fitness & Aqua aerobik">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="bi bi-heart-pulse-fill me-2"></i>Aqua Fitness</h5>
-                        <p class="card-text">Zajęcia ruchowe w wodzie prowadzone przez profesjonalnych trenerów.</p>
-                    </div>
-                </div>
-            </div>
+    }
+    else if (atrakcje.Count == 0)
+    {
+        <div class="alert alert-warning text-center">
+            <h4>Brak dostępnych atrakcji</h4>
+            <p>Przepraszamy, obecnie nie ma dostępnych atrakcji.</p>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="mb-4 text-primary">Gotowy na przygodę?</h2>
-            <p class="mb-4">Zaplanuj swoją wizytę już dziś i przeżyj niesamowitą wodną przygodę z rodziną i przyjaciółmi.</p>
-            <a href="/contact" class="btn btn-primary btn-lg">
-                <i class="bi bi-calendar2-check me-2"></i>Skontaktuj się z nami
-            </a>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @foreach (var a in atrakcje)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-img-top-container">
+                            <img src="@GetImageForAttraction(a.Nazwa)"
+                                 class="card-img-top"
+                                 alt="@a.Nazwa"
+                                 loading="lazy">
+                            @if (a.WymagaDodatkowejOplaty)
+                            {
+                                <span class="badge bg-danger position-absolute top-0 end-0 m-2">
+                                    Dodatkowa opłata: @($"{a.CenaDodatkowa:F2} zł")
+                                </span>
+                            }
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">@a.Nazwa</h3>
+                            <p class="card-text">@a.Opis</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-info text-dark">
+                                    <i class="bi bi-people-fill"></i> Maks. osób: @a.MaxOsób
+                                </span>
+                                @if (!a.WymagaDodatkowejOplaty)
+                                {
+                                    <span class="badge bg-success">
+                                        <i class="bi bi-check-circle"></i> Wliczone w cenę
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            }
         </div>
-    </section>
+    }
 </div>
 
-<style>
-    .card-img-top {
-        height: 220px;
-        object-fit: cover;
+@code {
+    private List<Atrakcja>? atrakcje;
+
+    protected override async Task OnInitializedAsync()
+    {
+        atrakcje = await AtrakcjaService.GetAtrakcjeAsync();
     }
 
-    .card-title i {
-        vertical-align: middle;
+    private string GetImageForAttraction(string nazwaAtrakcji)
+    {
+        // Możesz zastąpić te linki własnymi zdjęciami lub użyć lokalnych plików
+        return nazwaAtrakcji.ToLower() switch
+        {
+            "Basen Rekreacyjny" => "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            "Sauna Parowa" => "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            "Jacuzzi" => "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            "Basen Sportowy" => "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            "Strefa Relaksu" => "https://images.unsplash.com/photo-1582123387346-4fc0a1fb2b0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+            _ => "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        };
     }
 
-    .lead {
-        font-size: 1.2rem;
-    }
-</style>
+   
+}
