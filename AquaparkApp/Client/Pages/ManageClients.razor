@@ -1,12 +1,12 @@
-﻿// Plik: Pages/ManageClients.razor
+﻿
 @page "/manage-clients"
 @inject HttpClient Http
 @inject NavigationManager NavigationManager
 @using AquaparkApp.Shared.Models 
 @using AquaparkApp.Shared.Dtos
 @using Microsoft.AspNetCore.Components.Forms
-@using System.Text.Json // Dla JsonSerializer i JsonSerializerOptions
-@using System.Text.Json.Serialization // Dla ReferenceHandler
+@using System.Text.Json 
+@using System.Text.Json.Serialization 
 @implements IDisposable // Dla Timer
 
 <PageTitle>Zarządzanie Klientami</PageTitle>
