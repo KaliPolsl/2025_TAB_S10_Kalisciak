@@ -1,0 +1,154 @@
+﻿
+@page "/schedule"
+@* @inject HttpClient Http // Jeśli dane będą z API *@
+@using AquaparkApp.Shared.Models 
+@using System.Globalization
+
+<PageTitle>Harmonogram - Aquapark</PageTitle>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Harmonogram Wydarzeń i Atrakcji</h1>
+        @* Możesz dodać wybór dnia lub filtry *@
+    </div>
+
+    @if (wydarzenia == null && !loadFailed && isLoading)
+    {
+        <div class="text-center">
+            <p><em>Ładowanie harmonogramu...</em></p>
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else if (loadFailed)
+    {
+        <div class="alert alert-danger" role="alert">
+            Wystąpił błąd podczas ładowania harmonogramu. Spróbuj ponownie później.
+        </div>
+    }
+    else if (wydarzenia == null || !wydarzenia.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            Obecnie brak zaplanowanych specjalnych wydarzeń w harmonogramie. Zapraszamy do korzystania ze wszystkich naszych stałych atrakcji!
+        </div>
+    }
+    else
+    {
+        @* Wyświetlanie harmonogramu pogrupowanego po dniach tygodnia *@
+        var dniTygodnia = Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>().ToList();
+        var culture = new CultureInfo("pl-PL");
+
+        foreach (var dzien in dniTygodnia)
+        {
+            var wydarzeniaDnia = wydarzenia.Where(w => w.DzienTygodnia == dzien)
+                                          .OrderBy(w => w.GodzinaRozpoczecia)
+                                          .ToList();
+            if (wydarzeniaDnia.Any())
+            {
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">@culture.DateTimeFormat.GetDayName(dzien)</h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        @foreach (var wydarzenie in wydarzeniaDnia)
+                        {
+                            <li class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 text-info">@wydarzenie.Nazwa</h5>
+                                    <small class="text-muted">@wydarzenie.GodzinaRozpoczecia.ToString(@"hh\:mm") - @wydarzenie.GodzinaZakonczenia.ToString(@"hh\:mm")</small>
+                                </div>
+                                <p class="mb-1">@wydarzenie.Opis</p>
+                                <small class="text-muted">Lokalizacja: @wydarzenie.Lokalizacja</small>
+                                @if (!string.IsNullOrWhiteSpace(wydarzenie.DodatkoweInfo))
+                                {
+                                    <br /><small class="text-success fst-italic">@wydarzenie.DodatkoweInfo</small>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        }
+    }
+
+    <hr class="my-5" />
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h3 class="mb-0">Standardowe Godziny Otwarcia Aquaparku</h3>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-4">Poniedziałek - Piątek:</dt>
+                <dd class="col-sm-8">08:00 - 22:00</dd>
+
+                <dt class="col-sm-4">Sobota - Niedziela:</dt>
+                <dd class="col-sm-8">09:00 - 23:00</dd>
+
+                <dt class="col-sm-4">Święta:</dt>
+                <dd class="col-sm-8">Sprawdź aktualności lub skontaktuj się z nami.</dd>
+            </dl>
+            <p class="mt-3"><em>Uwaga: Godziny otwarcia poszczególnych atrakcji (np. saunarium) mogą się różnić. Szczegółowe informacje dostępne są na miejscu lub telefonicznie.</em></p>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Tymczasowe dane statyczne - w rzeczywistej aplikacji pobierałbyś to z API
+    private List<WydarzenieHarmonogramu>? wydarzenia;
+    private bool isLoading = true;
+    private bool loadFailed = false;
+
+    // Klasa modelu zagnieżdżona lub zdefiniowana w Shared/Models
+    // Jeśli zdefiniowałeś WydarzenieHarmonogramu.cs w Shared/Models, to jest OK.
+    // Jeśli nie, możesz ją zdefiniować tutaj tymczasowo:
+    public class WydarzenieHarmonogramu
+    {
+        public int Id { get; set; }
+        public string Nazwa { get; set; } = string.Empty;
+        public string Opis { get; set; } = string.Empty;
+        public DayOfWeek DzienTygodnia { get; set; }
+        public TimeSpan GodzinaRozpoczecia { get; set; }
+        public TimeSpan GodzinaZakonczenia { get; set; }
+        public string Lokalizacja { get; set; } = string.Empty;
+        public string? DodatkoweInfo { get; set; }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        loadFailed = false;
+        StateHasChanged(); // Pokaż spinner
+
+        try
+        {
+            // Symulacja pobierania danych z API
+            // W rzeczywistej aplikacji:
+            // wydarzenia = await Http.GetFromJsonAsync<List<WydarzenieHarmonogramu>>("api/HarmonogramWydarzen");
+            await Task.Delay(500); // Symulacja opóźnienia sieciowego
+
+            wydarzenia = new List<WydarzenieHarmonogramu>
+            {
+                new WydarzenieHarmonogramu { Id = 1, Nazwa = "Aqua Aerobik", Opis = "Energetyczne zajęcia w wodzie dla wszystkich grup wiekowych.", DzienTygodnia = DayOfWeek.Monday, GodzinaRozpoczecia = new TimeSpan(18, 0, 0), GodzinaZakonczenia = new TimeSpan(19, 0, 0), Lokalizacja = "Basen Sportowy", DodatkoweInfo = "Wymagane wcześniejsze zapisy." },
+                new WydarzenieHarmonogramu { Id = 2, Nazwa = "Aqua Aerobik", Opis = "Energetyczne zajęcia w wodzie dla wszystkich grup wiekowych.", DzienTygodnia = DayOfWeek.Wednesday, GodzinaRozpoczecia = new TimeSpan(18, 0, 0), GodzinaZakonczenia = new TimeSpan(19, 0, 0), Lokalizacja = "Basen Sportowy", DodatkoweInfo = "Wymagane wcześniejsze zapisy." },
+                new WydarzenieHarmonogramu { Id = 3, Nazwa = "Noc Saunowa", Opis = "Specjalne seanse saunowe z aromaterapią i poczęstunkiem.", DzienTygodnia = DayOfWeek.Friday, GodzinaRozpoczecia = new TimeSpan(20, 0, 0), GodzinaZakonczenia = new TimeSpan(23, 0, 0), Lokalizacja = "Strefa Saunarium", DodatkoweInfo = "Tylko dla dorosłych. Bilet specjalny." },
+                new WydarzenieHarmonogramu { Id = 4, Nazwa = "Animacje dla Dzieci", Opis = "Gry i zabawy w wodzie prowadzone przez animatorów.", DzienTygodnia = DayOfWeek.Saturday, GodzinaRozpoczecia = new TimeSpan(12, 0, 0), GodzinaZakonczenia = new TimeSpan(14, 0, 0), Lokalizacja = "Strefa Dziecka" },
+                new WydarzenieHarmonogramu { Id = 5, Nazwa = "Animacje dla Dzieci", Opis = "Gry i zabawy w wodzie prowadzone przez animatorów.", DzienTygodnia = DayOfWeek.Sunday, GodzinaRozpoczecia = new TimeSpan(12, 0, 0), GodzinaZakonczenia = new TimeSpan(14, 0, 0), Lokalizacja = "Strefa Dziecka" },
+                new WydarzenieHarmonogramu { Id = 6, Nazwa = "Poranne Pływanie dla Seniorów", Opis = "Spokojne pływanie rekreacyjne dla osób starszych.", DzienTygodnia = DayOfWeek.Tuesday, GodzinaRozpoczecia = new TimeSpan(9, 0, 0), GodzinaZakonczenia = new TimeSpan(10, 0, 0), Lokalizacja = "Basen Rekreacyjny" },
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Błąd podczas ładowania harmonogramu: {ex.Message}");
+            loadFailed = true;
+            wydarzenia = new List<WydarzenieHarmonogramu>();
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+}
