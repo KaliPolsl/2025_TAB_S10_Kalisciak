@@ -1,0 +1,651 @@
+﻿@page "/panel-sprzedawcy"
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+@using AquaparkApp.Shared.Dtos
+@using AquaparkApp.Shared.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@implements IDisposable
+
+<PageTitle>Panel Sprzedawcy</PageTitle>
+
+<div class="container-fluid mt-3">
+    <div class="row">
+        <!-- Główna kolumna robocza -->
+        <div class="col-lg-8">
+            @* Sekcja Obsługi Klienta (Wyszukiwanie/Dodawanie) - pozostaje bez zmian jak w poprzedniej wersji *@
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-primary text-white">
+                    <h4><i class="bi bi-person-plus-fill"></i> Obsługa Klienta</h4>
+                </div>
+                <div class="card-body">
+                    @if (selectedKlient == null)
+                    {
+                        <h5>Krok 1: Znajdź lub Dodaj Klienta</h5>
+                        @* ... (kod wyszukiwania i dodawania klienta jak poprzednio) ... *@
+                        <!-- Sekcja Wyszukiwania Klientów -->
+                        <div class="input-group mb-3">
+                            <InputText @bind-Value="klientSearchTerm" class="form-control" placeholder="Wyszukaj (imię, nazwisko, ID, tel, email)..." @oninput="HandleKlientSearchInput" />
+                            <button class="btn btn-outline-primary" type="button" @onclick="SearchKlienciAsync" disabled="@isKlientSearching">
+                                @if (isKlientSearching)
+                                {
+                                    <span class="spinner-border spinner-border-sm"></span>
+
+                                    <span> Szukanie...</span>
+                                }
+                                else
+                                {
+                                    <i class="bi bi-search"></i>
+
+                                    <span> Szukaj</span>
+                                }
+                            </button>
+                        </div>
+
+                        @if (isKlientSearching && (klientSearchResults == null || !klientSearchResults.Any()))
+                        {
+                            <div class="text-center my-3"><div class="spinner-border text-primary"></div></div>
+                        }
+                        else if (klientSearchAttempted && (klientSearchResults == null || !klientSearchResults.Any()))
+                        {
+                            <div class="alert alert-warning">Nie znaleziono klientów. Możesz dodać nowego.</div>
+                        }
+                        else if (klientSearchResults != null && klientSearchResults.Any())
+                        {
+                            <ul class="list-group mb-3" style="max-height: 200px; overflow-y: auto;">
+                                @foreach (var klientRes in klientSearchResults)
+                                {
+                                    <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" @onclick="() => SelectKlient(klientRes)" style="cursor:pointer;">
+                                        <span>@klientRes.Imię @klientRes.Nazwisko (@(klientRes.Email ?? klientRes.NrTelefonu ?? $"ID: {klientRes.Id}"))</span>
+                                        <i class="bi bi-arrow-right-circle"></i>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                        <hr />
+                        <h5>Lub Dodaj Nowego Klienta:</h5>
+                        <EditForm Model="@newKlient" OnValidSubmit="HandleNewKlientSubmit">
+                            <DataAnnotationsValidator />
+                            @* ... (pola formularza nowego klienta jak poprzednio) ... *@
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="imie" class="form-label">Imię:</label>
+                                    <InputText id="imie" class="form-control form-control-sm" @bind-Value="newKlient.Imię" />
+                                    <ValidationMessage For="@(() => newKlient.Imię)" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nazwisko" class="form-label">Nazwisko:</label>
+                                    <InputText id="nazwisko" class="form-control form-control-sm" @bind-Value="newKlient.Nazwisko" />
+                                    <ValidationMessage For="@(() => newKlient.Nazwisko)" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nrTelefonu" class="form-label">Telefon:</label>
+                                    <InputText id="nrTelefonu" class="form-control form-control-sm" @bind-Value="newKlient.NrTelefonu" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <InputText id="email" type="email" class="form-control form-control-sm" @bind-Value="newKlient.Email" />
+                                    <ValidationMessage For="@(() => newKlient.Email)" />
+                                </div>
+                            </div>
+                            @if (!string.IsNullOrWhiteSpace(newKlientErrorMessage))
+                            {
+                                <div class="alert alert-danger mt-2 py-1">@newKlientErrorMessage</div>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(newKlientSuccessMessage))
+                            {
+                                <div class="alert alert-success mt-2 py-1">@newKlientSuccessMessage</div>
+                            }
+                            <button type="submit" class="btn btn-success mt-3 btn-sm" disabled="@isSubmittingNewKlient">
+                                @if (isSubmittingNewKlient)
+                                {
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                }
+                                else
+                                {
+                                    <i class="bi bi-plus-circle"></i>
+                                }
+                                Dodaj Klienta
+                            </button>
+                        </EditForm>
+                    }
+                    else // Jeśli klient jest wybrany
+                    {
+                        <div class="alert alert-success d-flex justify-content-between align-items-center">
+                            <div>
+                                Wybrany klient: <strong>@selectedKlient.Imię @selectedKlient.Nazwisko</strong> (ID: @selectedKlient.Id)
+                            </div>
+                            <button class="btn btn-sm btn-outline-danger" @onclick="ClearSelectedKlientAndCart">
+                                <i class="bi bi-x-circle"></i> Zmień Klienta / Anuluj
+                            </button>
+                        </div>
+
+                        <!-- === SEKCJA KOSZYKA (NOWA) === -->
+                        <div class="mt-4">
+                            <h5><i class="bi bi-cart3"></i> Koszyk Zamówienia</h5>
+                            @if (koszyk.Any())
+                            {
+                                <table class="table table-sm table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Oferta</th>
+                                            <th class="text-center">Ilość</th>
+                                            <th class="text-end">Cena Jedn.</th>
+                                            <th class="text-end">Suma</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in koszyk)
+                                        {
+                                            <tr>
+                                                <td>@item.Oferta.NazwaOferty</td>
+                                                <td class="text-center">
+                                                    <button class="btn btn-sm btn-outline-secondary py-0 px-1" @onclick="() => UpdateCartItemQuantity(item, item.Ilosc - 1)" disabled="@(item.Ilosc <= 1)">-</button>
+                                                    <span class="mx-2">@item.Ilosc</span>
+                                                    <button class="btn btn-sm btn-outline-secondary py-0 px-1" @onclick="() => UpdateCartItemQuantity(item, item.Ilosc + 1)">+</button>
+                                                </td>
+                                                <td class="text-end">@item.Oferta.CenaPodstawowa.ToString("C")</td>
+                                                <td class="text-end">@((item.Oferta.CenaPodstawowa * item.Ilosc).ToString("C"))</td>
+                                                <td class="text-end">
+                                                    <button class="btn btn-sm btn-outline-danger py-0 px-1" @onclick="() => RemoveFromCart(item.Oferta.Id)">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3" class="text-end fw-bold">Suma częściowa:</td>
+                                            <td class="text-end fw-bold">@SumaKoszyka.ToString("C")</td>
+                                            <td></td>
+                                        </tr>
+                                        @* TODO: Miejsce na zastosowanie zniżki *@
+                                        <tr>
+                                            <td colspan="3" class="text-end fw-bold fs-5 text-success">Do Zapłaty:</td>
+                                            <td class="text-end fw-bold fs-5 text-success">@SumaKoszyka.ToString("C")</td>
+                                            <td></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+
+                                <div class="row mt-3 align-items-end">
+                                    <div class="col-md-6">
+                                        <label for="metodaPlatnosci" class="form-label">Metoda Płatności:</label>
+                                        <InputSelect id="metodaPlatnosci" class="form-select" @bind-Value="wybranaMetodaPlatnosci">
+                                            <option value="">-- Wybierz metodę --</option>
+                                            @foreach (var metoda in dostepneMetodyPlatnosci)
+                                            {
+                                                <option value="@metoda">@metoda</option>
+                                            }
+                                        </InputSelect>
+                                        @* Możesz dodać ValidationMessage, jeśli to pole będzie wymagane w EditContext *@
+                                    </div>
+                                    @if (wybranaMetodaPlatnosci == "Gotówka")
+                                    {
+                                        <div class="col-md-6">
+                                            <label for="kwotaOtrzymana" class="form-label">Otrzymano Gotówki:</label>
+                                            <InputNumber id="kwotaOtrzymana" class="form-control" @bind-Value="kwotaOtrzymanaGotowka" @oninput="ObliczReszte" placeholder="Wprowadź kwotę" />
+                                            @if (kwotaOtrzymanaGotowka.HasValue && kwotaOtrzymanaGotowka >= SumaKoszyka)
+                                            {
+                                                <div class="form-text text-success fw-bold">Reszta: @(ResztaDoWydania.ToString("C"))</div>
+                                            }
+                                            else if (kwotaOtrzymanaGotowka.HasValue && kwotaOtrzymanaGotowka < SumaKoszyka)
+                                            {
+                                                <div class="form-text text-danger">Kwota zbyt mała.</div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+
+                                <button class="btn btn-lg btn-success w-100 mt-3" @onclick="ProceedToPayment" disabled="@(string.IsNullOrWhiteSpace(wybranaMetodaPlatnosci) || (wybranaMetodaPlatnosci == "Gotówka" && (!kwotaOtrzymanaGotowka.HasValue || kwotaOtrzymanaGotowka < SumaKoszyka)))">
+                                    <i class="bi bi-credit-card"></i> Zatwierdź i Zapłać
+                                </button>
+                            }
+                            else
+                            {
+                                <p class="text-muted"><em>Koszyk jest pusty. Wybierz oferty z listy poniżej.</em></p>
+                            }
+                        </div>
+                        <!-- === KONIEC SEKCJI KOSZYKA === -->
+                    }
+                </div>
+            </div>
+
+            @if (selectedKlient != null) // Pokaż listę ofert tylko jeśli klient jest wybrany
+            {
+                <div class="card shadow-sm mt-3">
+                    <div class="card-header bg-info text-white">
+                        <h4><i class="bi bi-card-list"></i> Dostępne Oferty</h4>
+                    </div>
+                    <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                        @if (ofertyCennikowe == null && !loadOfertyFailed && isLoadingOferty)
+                        {
+                            <p><em>Ładowanie ofert...</em> <span class="spinner-border spinner-border-sm"></span></p>
+                        }
+                        else if (loadOfertyFailed)
+                        {
+                            <p class="text-danger"><em>Nie udało się załadować ofert.</em></p>
+                        }
+                        else if (ofertyCennikowe != null && ofertyCennikowe.Any())
+                        {
+                            <div class="list-group list-group-flush">
+                                @foreach (var oferta in ofertyCennikowe)
+                                {
+                                    <button type="button" class="list-group-item list-group-item-action" @onclick="() => AddToCart(oferta)">
+                                        <strong>@oferta.NazwaOferty</strong> (@oferta.Typ) - @oferta.CenaPodstawowa.ToString("C")
+                                        @if (oferta.LimitCzasuMinuty.HasValue)
+                                        {
+                                            <small class="text-muted"> (@oferta.LimitCzasuMinuty min)</small>
+                                        }
+                                    </button>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <p><em>Brak dostępnych ofert.</em></p>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <!-- Kolumna boczna z szybkimi informacjami -->
+        <div class="col-lg-4">
+            @* ... (kod kolumny bocznej bez zmian) ... *@
+            <div class="card shadow-sm mb-3">
+                <div class="card-header bg-secondary text-white">
+                    <h5><i class="bi bi-info-circle-fill"></i> Szybkie Info</h5>
+                </div>
+                <div class="card-body">
+                    @if (isLoadingLiczbaAktywnychWizyt)
+                    {
+                        <p>Aktywne wizyty: <span class="spinner-border spinner-border-sm"></span></p>
+                    }
+                    else
+                    {
+                        <p><strong>Aktywne wizyty: @liczbaAktywnychWizyt</strong></p>
+                    }
+                    <p>Data: @DateTime.Now.ToString("dddd, dd MMMM yyyy", new System.Globalization.CultureInfo("pl-PL"))</p>
+                    <p>Godzina: @DateTime.Now.ToString("HH:mm:ss")</p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">
+                    <h5><i class="bi bi-link-45deg"></i> Szybkie Linki</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="/manage-clients" class="text-decoration-none">Zarządzanie Klientami (Pełne)</a></li>
+                    <li class="list-group-item"><a href="/cennik" class="text-decoration-none">Pełny Cennik</a></li>
+                    <li class="list-group-item"><a href="/attractions" class="text-decoration-none">Nasze Atrakcje</a></li>
+                    <li class="list-group-item"><a href="/schedule" class="text-decoration-none">Harmonogram</a></li>
+                    <li class="list-group-item"><a href="/monitor-opasek" class="text-decoration-none">Monitor Opasek</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    // --- Pola dla Klienta (jak poprzednio) ---
+    private Klient newKlient = new Klient();
+    private bool isSubmittingNewKlient = false;
+    private string? newKlientErrorMessage;
+    private string? newKlientSuccessMessage;
+    private string? klientSearchTerm;
+    private List<Klient>? klientSearchResults;
+    private bool isKlientSearching = false;
+    private bool klientSearchAttempted = false;
+    private Klient? selectedKlient;
+    private Timer? _klientDebounceTimer;
+
+    // === NOWE POLA I LOGIKA DLA METOD PŁATNOŚCI ===
+    private string? wybranaMetodaPlatnosci; // Przechowuje wybraną metodę
+    private List<string> dostepneMetodyPlatnosci = new List<string> { "Karta", "Gotówka", "BLIK", "Voucher" }; // Zahardkodowana lista
+    private decimal? kwotaOtrzymanaGotowka; // Dla płatności gotówką
+    private decimal ResztaDoWydania => (kwotaOtrzymanaGotowka ?? 0) - SumaKoszyka;
+
+    // --- Pola dla Ofert Cennikowych (jak poprzednio) ---
+    private List<OfertaCennikowa>? ofertyCennikowe;
+    private bool isLoadingOferty = true;
+    private bool loadOfertyFailed = false;
+
+    // --- Pola dla Liczby Aktywnych Wizyt (jak poprzednio) ---
+    private int liczbaAktywnychWizyt = 0;
+    private bool isLoadingLiczbaAktywnychWizyt = true;
+
+    private readonly int _debounceTimeoutMs = 500;
+    private JsonSerializerOptions jsonSerializerOptions = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve,
+            PropertyNameCaseInsensitive = true
+        };
+
+    // === NOWE POLA I KLASY DLA KOSZYKA ===
+    private List<KoszykItem> koszyk = new List<KoszykItem>();
+
+    public class KoszykItem
+    {
+        public OfertaCennikowa Oferta { get; set; } = new();
+        public int Ilosc { get; set; }
+    }
+
+    private decimal SumaKoszyka => koszyk.Sum(item => item.Oferta.CenaPodstawowa * item.Ilosc);
+    // === KONIEC NOWYCH PÓL I KLAS DLA KOSZYKA ===
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var ofertyTask = LoadOfertyAsync();
+        var liczbaWizytTask = LoadLiczbaAktywnychWizytAsync();
+        await Task.WhenAll(ofertyTask, liczbaWizytTask);
+    }
+
+    // --- Metody obsługi klienta (HandleNewKlientSubmit, HandleKlientSearchInput, SearchKlienciAsync, SelectKlient) - jak poprzednio ---
+    private async Task HandleNewKlientSubmit()
+    {
+        isSubmittingNewKlient = true;
+        newKlientErrorMessage = null;
+        newKlientSuccessMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/Klient", newKlient);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var createdKlientJson = await response.Content.ReadAsStringAsync();
+                var createdKlient = JsonSerializer.Deserialize<Klient>(createdKlientJson, jsonSerializerOptions);
+
+                if (createdKlient != null)
+                {
+                    newKlientSuccessMessage = $"Pomyślnie dodano klienta: {createdKlient.Imię} {createdKlient.Nazwisko} (ID: {createdKlient.Id})";
+                    SelectKlient(createdKlient); // Automatycznie wybierz nowo dodanego klienta
+                }
+                newKlient = new Klient();
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                {
+                    try
+                    {
+                        var validationErrors = JsonSerializer.Deserialize<Dictionary<string, string[]>>(errorContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                        if (validationErrors != null && validationErrors.TryGetValue("errors", out var errorsNode))
+                        {
+                            newKlientErrorMessage = "Błąd walidacji: " + string.Join("; ", errorsNode.SelectMany(e => e));
+                        }
+                        else if (validationErrors != null && validationErrors.Any())
+                        {
+                            newKlientErrorMessage = "Błąd walidacji: " + string.Join("; ", validationErrors.Select(kvp => $"{kvp.Key}: {string.Join(", ", kvp.Value)}"));
+                        }
+                        else
+                        {
+                            newKlientErrorMessage = $"Błąd: {errorContent.Substring(0, Math.Min(errorContent.Length, 250))}";
+                        }
+                    }
+                    catch
+                    {
+                        newKlientErrorMessage = $"Błąd podczas dodawania klienta ({(int)response.StatusCode}). Treść: {errorContent.Substring(0, Math.Min(errorContent.Length, 250))}";
+                    }
+                }
+                else
+                {
+                    newKlientErrorMessage = $"Błąd serwera ({(int)response.StatusCode}): {response.ReasonPhrase}";
+                }
+            }
+        }
+        catch (Exception ex) { newKlientErrorMessage = $"Wystąpił nieoczekiwany błąd: {ex.Message}"; }
+        finally { isSubmittingNewKlient = false; StateHasChanged(); }
+    }
+
+    private void HandleKlientSearchInput(ChangeEventArgs e)
+    {
+        klientSearchTerm = e.Value?.ToString();
+        selectedKlient = null;
+        koszyk.Clear(); // Wyczyść koszyk przy zmianie wyszukiwania
+        _klientDebounceTimer?.Dispose();
+        _klientDebounceTimer = new Timer(async _ => { await InvokeAsync(SearchKlienciAsync); }, null, _debounceTimeoutMs, Timeout.Infinite);
+    }
+
+    private async Task SearchKlienciAsync()
+    {
+        _klientDebounceTimer?.Dispose();
+        if (string.IsNullOrWhiteSpace(klientSearchTerm))
+        {
+            klientSearchResults = null;
+            klientSearchAttempted = false;
+            StateHasChanged();
+            return;
+        }
+        isKlientSearching = true;
+        klientSearchAttempted = true;
+        StateHasChanged();
+        try
+        {
+            var response = await Http.GetAsync($"api/Klient?searchTerm={Uri.EscapeDataString(klientSearchTerm)}");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                klientSearchResults = JsonSerializer.Deserialize<List<Klient>>(jsonString, jsonSerializerOptions);
+            }
+            else { klientSearchResults = new List<Klient>(); }
+        }
+        catch (Exception ex) { klientSearchResults = new List<Klient>(); Console.WriteLine($"Błąd wyszukiwania: {ex.Message}"); }
+        finally { isKlientSearching = false; StateHasChanged(); }
+    }
+
+    private void SelectKlient(Klient klient)
+    {
+        selectedKlient = klient;
+        klientSearchResults = null;
+        klientSearchTerm = string.Empty;
+        klientSearchAttempted = false;
+        koszyk.Clear(); // Wyczyść koszyk dla nowego klienta
+        Console.WriteLine($"Wybrano klienta: {selectedKlient.Imię} {selectedKlient.Nazwisko}");
+    }
+
+    private void ClearSelectedKlientAndCart() // Zmieniona nazwa i funkcjonalność
+    {
+        selectedKlient = null;
+        koszyk.Clear(); // Wyczyść również koszyk
+        klientSearchResults = null;
+        klientSearchTerm = string.Empty;
+        klientSearchAttempted = false;
+    }
+
+
+    // --- Metody ładowania ofert i liczby wizyt (jak poprzednio) ---
+    private async Task LoadOfertyAsync()
+    {
+        isLoadingOferty = true;
+        loadOfertyFailed = false;
+        try
+        {
+            var response = await Http.GetAsync("api/OfertaCennikowa");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                ofertyCennikowe = JsonSerializer.Deserialize<List<OfertaCennikowa>>(jsonString, jsonSerializerOptions);
+            }
+            else { loadOfertyFailed = true; }
+        }
+        catch (Exception ex) { loadOfertyFailed = true; Console.WriteLine($"Błąd ładowania ofert: {ex.Message}"); }
+        finally { isLoadingOferty = false; }
+    }
+
+    private async Task LoadLiczbaAktywnychWizytAsync()
+    {
+        isLoadingLiczbaAktywnychWizyt = true;
+        try
+        {
+            liczbaAktywnychWizyt = await Http.GetFromJsonAsync<int>("api/Wizyta/aktywne/liczba");
+        }
+        catch (Exception ex) { Console.WriteLine($"Błąd ładowania liczby wizyt: {ex.Message}"); }
+        finally { isLoadingLiczbaAktywnychWizyt = false; }
+    }
+
+    // === NOWE METODY DLA KOSZYKA ===
+    private void AddToCart(OfertaCennikowa oferta)
+    {
+        if (selectedKlient == null)
+        {
+            // Można wyświetlić jakiś alert/toast
+            newKlientErrorMessage = "Najpierw wybierz lub dodaj klienta!";
+            newKlientSuccessMessage = null;
+            return;
+        }
+        newKlientErrorMessage = null; // Wyczyść ewentualny poprzedni błąd
+
+        var istniejacyProdukt = koszyk.FirstOrDefault(item => item.Oferta.Id == oferta.Id);
+        if (istniejacyProdukt != null)
+        {
+            istniejacyProdukt.Ilosc++;
+        }
+        else
+        {
+            koszyk.Add(new KoszykItem { Oferta = oferta, Ilosc = 1 });
+        }
+        Console.WriteLine($"Dodano do koszyka: {oferta.NazwaOferty}");
+    }
+
+    private void UpdateCartItemQuantity(KoszykItem item, int nowaIlosc)
+    {
+        if (nowaIlosc <= 0)
+        {
+            RemoveFromCart(item.Oferta.Id);
+        }
+        else
+        {
+            item.Ilosc = nowaIlosc;
+        }
+    }
+
+    private void RemoveFromCart(int ofertaId)
+    {
+        var itemDoUsuniecia = koszyk.FirstOrDefault(item => item.Oferta.Id == ofertaId);
+        if (itemDoUsuniecia != null)
+        {
+            koszyk.Remove(itemDoUsuniecia);
+        }
+    }
+
+    private async Task ProceedToPayment()
+    {
+        if (selectedKlient == null || !koszyk.Any())
+        {
+            newKlientErrorMessage = "Koszyk jest pusty lub nie wybrano klienta.";
+            newKlientSuccessMessage = null;
+            StateHasChanged();
+            return;
+        }
+        if (string.IsNullOrWhiteSpace(wybranaMetodaPlatnosci))
+        {
+            newKlientErrorMessage = "Wybierz metodę płatności."; // Można użyć innego pola na ten błąd
+            newKlientSuccessMessage = null;
+            StateHasChanged();
+            return;
+        }
+        if (wybranaMetodaPlatnosci == "Gotówka" && (!kwotaOtrzymanaGotowka.HasValue || kwotaOtrzymanaGotowka < SumaKoszyka))
+        {
+            newKlientErrorMessage = "Wprowadzona kwota gotówki jest niewystarczająca.";
+            newKlientSuccessMessage = null;
+            StateHasChanged();
+            return;
+        }
+        newKlientErrorMessage = null;
+
+        isSubmittingNewKlient = true; // Używamy tej samej flagi
+        StateHasChanged();
+
+        var requestDto = new UtworzTransakcjeRequestDto
+            {
+                KlientId = selectedKlient.Id,
+                PozycjeZamowienia = koszyk.Select(item => new PozycjaZamowieniaDto
+                {
+                    OfertaId = item.Oferta.Id,
+                    Ilosc = item.Ilosc
+                }).ToList(),
+                MetodaPlatnosci = wybranaMetodaPlatnosci, // Przekazujemy wybraną metodę
+                                                          // ZnizkaId = wybraneGlobalneZnizkaId
+            };
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/Transakcja/finalizuj", requestDto);
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var transakcjaResponse = JsonSerializer.Deserialize<UtworzTransakcjeResponseDto>(responseContent, jsonSerializerOptions);
+                newKlientSuccessMessage = transakcjaResponse?.Wiadomosc ?? "Transakcja zakończona pomyślnie!";
+                if (wybranaMetodaPlatnosci == "Gotówka" && ResztaDoWydania > 0)
+                {
+                    newKlientSuccessMessage += $" Reszta do wydania: {ResztaDoWydania.ToString("C")}";
+                }
+
+                Console.WriteLine($"Utworzono płatność ID: {transakcjaResponse?.PlatnoscId}, Produkty IDs: {string.Join(", ", transakcjaResponse?.UtworzoneProduktyZakupioneIds ?? new List<int>())}");
+
+                koszyk.Clear();
+                selectedKlient = null;
+                klientSearchTerm = string.Empty;
+                klientSearchResults = null;
+                klientSearchAttempted = false;
+                wybranaMetodaPlatnosci = null; // Wyczyść wybraną metodę
+                kwotaOtrzymanaGotowka = null; // Wyczyść kwotę gotówki
+            }
+            else
+            {
+                // ... (obsługa błędów jak poprzednio) ...
+                try
+                {
+                    var errorResponseDto = JsonSerializer.Deserialize<UtworzTransakcjeResponseDto>(responseContent, jsonSerializerOptions);
+                    newKlientErrorMessage = errorResponseDto?.Wiadomosc ?? $"Błąd przetwarzania transakcji ({(int)response.StatusCode}).";
+                }
+                catch
+                {
+                    newKlientErrorMessage = $"Błąd przetwarzania transakcji ({(int)response.StatusCode}): {responseContent.Substring(0, Math.Min(responseContent.Length, 250))}";
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            newKlientErrorMessage = $"Wystąpił nieoczekiwany błąd podczas płatności: {ex.Message}";
+            Console.WriteLine($"Wyjątek (ProceedToPayment): {ex}");
+        }
+        finally
+        {
+            isSubmittingNewKlient = false;
+            StateHasChanged();
+        }
+    }
+    private void ObliczReszte(ChangeEventArgs e)
+    {
+        // Ta metoda jest potrzebna, aby @oninput wyzwoliło StateHasChanged i przeliczenie ResztaDoWydania
+        // Można ją zostawić pustą, jeśli InputNumber sam aktualizuje powiązaną właściwość
+        // lub dodać tu logikę, jeśli potrzebna jest natychmiastowa reakcja inna niż przeliczenie właściwości.
+        // StateHasChanged(); // Często nie jest potrzebne, bo InputNumber aktualizuje @bind-Value
+    }
+
+
+
+    // === KONIEC NOWYCH METOD DLA KOSZYKA ===
+
+    private void NavigateToManageClients()
+    {
+        NavigationManager.NavigateTo("/manage-clients");
+    }
+
+    public void Dispose()
+    {
+        _klientDebounceTimer?.Dispose();
+    }
+
+
+
+}
