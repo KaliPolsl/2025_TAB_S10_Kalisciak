@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0cmFjdGlvbnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/aqua/AquaparkApp/Client/Pages/Cennik.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2VubmlrLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/aqua/AquaparkApp/Client/Pages/ClientEdit.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50RWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/aqua/AquaparkApp/Client/Pages/ManageClients.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlQ2xpZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aqua/AquaparkApp/Client/Pages/PanelSprzedawcy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFuZWxTcHJ6ZWRhd2N5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/aqua/AquaparkApp/Client/Pages/Schedule.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/aqua/AquaparkApp/Client/Pages/Todo.razor]

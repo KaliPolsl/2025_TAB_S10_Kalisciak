@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NDUKm9KCM9zGvXCjyvgmDJbevf/3o/8jJ1zdYRuReaY=",
+  "Hash": "MUG2wR1sOTX0mbHrFGHzCisMBGCJt8Zgtn2b0myoj1k=",
   "Source": "AquaparkApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "tn1ekb7euu",
-      "Integrity": "6Y+W1u9dSHYMHUvipm4pzXDRbkYblf9Y/TmDgPGhKgA=",
+      "Fingerprint": "6yqhf2d8f3",
+      "Integrity": "rikj8bRalKJF5Wu8ranvn4TPtyGGcREk6ROJg9R4tGY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\AquaparkApp.Client.dll"
@@ -136,8 +136,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "34e81ubir7",
-      "Integrity": "jf2TekS2E3TSW7mkPpM8N3wnkxYma6eGykup7PtlCIw=",
+      "Fingerprint": "6zlvhmsi8p",
+      "Integrity": "/nW5gFODX6zSkdjIPLRTKzKabNcshlHe7mWJVA86Gq0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\AquaparkApp.Client.pdb"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "cwilgguueo",
-      "Integrity": "7AKxkHGu0Wlnf6RMVeueQztD4YvkXyymxnLSN7k7jp8=",
+      "Fingerprint": "zv703gan6e",
+      "Integrity": "76rzgT2/GXpkTOfxtBAryK139FOr5lzwpmqI2IwOcDE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Shared\\bin\\Debug\\net7.0\\AquaparkApp.Shared.dll"
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "t3ofjxe7ba",
-      "Integrity": "NyE1KOiTSH6HEvhHSI/lHFJtIvaacvceidtQODRG+pU=",
+      "Fingerprint": "4nza45ncuv",
+      "Integrity": "EAW9FsSD4H63ibOKt48s5M0scX6ZSjWPkZZX08mHx2M=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Shared\\bin\\Debug\\net7.0\\AquaparkApp.Shared.pdb"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "y7en3paail",
-      "Integrity": "vq4yOm7cNnkjQR4uMgQnlUoU6teQtNP0xuT2dBIpUQs=",
+      "Fingerprint": "cqbk5t5f9s",
+      "Integrity": "ZEENCNmDRfNvzjfDA7pXWLsQZwV2LTGV2bmgjfpQfgI=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\blazor.boot.json"
@@ -6191,7 +6191,7 @@
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.IdentityModel.Abstractions.dll"
     },
     {
-      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-t3ofjxe7ba.gz",
+      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-4nza45ncuv.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -6205,8 +6205,8 @@
       "RelatedAsset": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Shared.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "dtz2hko95d",
-      "Integrity": "0WJ9BCXWRFsoZxruv5PvGJRgti2/Zj48cy11SM5fa0Q=",
+      "Fingerprint": "gw5zx0d6mp",
+      "Integrity": "oBnq8XO9+jYspEBloSRdhAu1tDpwedjWaTlPHZAZhsQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Shared.pdb"
@@ -7157,7 +7157,7 @@
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\mscorlib.dll"
     },
     {
-      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-34e81ubir7.gz",
+      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-6zlvhmsi8p.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -7171,8 +7171,8 @@
       "RelatedAsset": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "eovmqfp3ub",
-      "Integrity": "InAo4VIJ7gKmXRNj3/QjJuPIF0h+eUvA03TP4DsmwjA=",
+      "Fingerprint": "ibc969527j",
+      "Integrity": "ngCL6u5svhsZnzamW55riVnKG1zAB3FByH7/3QNJD2c=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.pdb"
@@ -8039,7 +8039,7 @@
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.Pipes.dll"
     },
     {
-      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-cwilgguueo.gz",
+      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-zv703gan6e.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -8053,8 +8053,8 @@
       "RelatedAsset": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Shared.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "34a4gkdn7j",
-      "Integrity": "zYPf8QOP777Ghk2M1iOOjOTkRwZ6PBuyRVTqwvHn3G4=",
+      "Fingerprint": "koake38jev",
+      "Integrity": "FG02XJYMw0kav0TYMEz+lyzDRduLtW8lfYqVCV3Hl88=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Shared.dll"
@@ -8963,7 +8963,7 @@
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
     },
     {
-      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-y7en3paail.gz",
+      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-cqbk5t5f9s.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -8977,8 +8977,8 @@
       "RelatedAsset": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "wwqt4ebpwm",
-      "Integrity": "gGadR9WHj83AtJUDZM7JeGqDZS1I4bcx2/6F4uq0SW0=",
+      "Fingerprint": "ne89vykyik",
+      "Integrity": "MWYRC7dqo3+Z2HQEPrbp5mUvJjf1sATg15ltZYmZEs4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -9971,7 +9971,7 @@
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.Security.Cryptography.X509Certificates.dll"
     },
     {
-      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-tn1ekb7euu.gz",
+      "Identity": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-6yqhf2d8f3.gz",
       "SourceId": "AquaparkApp.Client",
       "SourceType": "Computed",
       "ContentRoot": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\",
@@ -9985,8 +9985,8 @@
       "RelatedAsset": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "htmy39776s",
-      "Integrity": "+4B3jAyLFAOB1FpHXRwbPLn8NOpAxSD1k6l6DkkeSec=",
+      "Fingerprint": "w2ta6ycd05",
+      "Integrity": "uD+9g+W1HpxdloO0cw4LlUALXYprkHL+IG2x7yflhFU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\aqua\\AquaparkApp\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\AquaparkApp.Client.dll"
@@ -10479,7 +10479,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "107008"
+          "Value": "156160"
         },
         {
           "Name": "Content-Type",
@@ -10487,11 +10487,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6Y+W1u9dSHYMHUvipm4pzXDRbkYblf9Y/TmDgPGhKgA=\""
+          "Value": "\"rikj8bRalKJF5Wu8ranvn4TPtyGGcREk6ROJg9R4tGY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 20:04:44 GMT"
+          "Value": "Wed, 28 May 2025 21:19:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10501,18 +10501,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6Y+W1u9dSHYMHUvipm4pzXDRbkYblf9Y/TmDgPGhKgA="
+          "Value": "sha256-rikj8bRalKJF5Wu8ranvn4TPtyGGcREk6ROJg9R4tGY="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.dll",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-tn1ekb7euu.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-6yqhf2d8f3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000030804300"
+          "Quality": "0.000020975794"
         }
       ],
       "ResponseHeaders": [
@@ -10522,15 +10522,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32462"
+          "Value": "47673"
         },
         {
           "Name": "ETag",
-          "Value": "\"+4B3jAyLFAOB1FpHXRwbPLn8NOpAxSD1k6l6DkkeSec=\""
+          "Value": "\"uD+9g+W1HpxdloO0cw4LlUALXYprkHL+IG2x7yflhFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10550,19 +10550,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"6Y+W1u9dSHYMHUvipm4pzXDRbkYblf9Y/TmDgPGhKgA=\""
+          "Value": "W/\"rikj8bRalKJF5Wu8ranvn4TPtyGGcREk6ROJg9R4tGY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6Y+W1u9dSHYMHUvipm4pzXDRbkYblf9Y/TmDgPGhKgA="
+          "Value": "sha256-rikj8bRalKJF5Wu8ranvn4TPtyGGcREk6ROJg9R4tGY="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.dll.gz",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-tn1ekb7euu.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\z9y8eycql4-6yqhf2d8f3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10571,7 +10571,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32462"
+          "Value": "47673"
         },
         {
           "Name": "Content-Type",
@@ -10579,11 +10579,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+4B3jAyLFAOB1FpHXRwbPLn8NOpAxSD1k6l6DkkeSec=\""
+          "Value": "\"uD+9g+W1HpxdloO0cw4LlUALXYprkHL+IG2x7yflhFU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10601,7 +10601,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+4B3jAyLFAOB1FpHXRwbPLn8NOpAxSD1k6l6DkkeSec="
+          "Value": "sha256-uD+9g+W1HpxdloO0cw4LlUALXYprkHL+IG2x7yflhFU="
         }
       ]
     },
@@ -10616,7 +10616,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "57800"
+          "Value": "86444"
         },
         {
           "Name": "Content-Type",
@@ -10624,11 +10624,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jf2TekS2E3TSW7mkPpM8N3wnkxYma6eGykup7PtlCIw=\""
+          "Value": "\"/nW5gFODX6zSkdjIPLRTKzKabNcshlHe7mWJVA86Gq0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 20:04:44 GMT"
+          "Value": "Wed, 28 May 2025 21:19:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10638,18 +10638,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jf2TekS2E3TSW7mkPpM8N3wnkxYma6eGykup7PtlCIw="
+          "Value": "sha256-/nW5gFODX6zSkdjIPLRTKzKabNcshlHe7mWJVA86Gq0="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-34e81ubir7.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-6zlvhmsi8p.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000021886627"
+          "Quality": "0.000014558796"
         }
       ],
       "ResponseHeaders": [
@@ -10659,15 +10659,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45689"
+          "Value": "68686"
         },
         {
           "Name": "ETag",
-          "Value": "\"InAo4VIJ7gKmXRNj3/QjJuPIF0h+eUvA03TP4DsmwjA=\""
+          "Value": "\"ngCL6u5svhsZnzamW55riVnKG1zAB3FByH7/3QNJD2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10687,19 +10687,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"jf2TekS2E3TSW7mkPpM8N3wnkxYma6eGykup7PtlCIw=\""
+          "Value": "W/\"/nW5gFODX6zSkdjIPLRTKzKabNcshlHe7mWJVA86Gq0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jf2TekS2E3TSW7mkPpM8N3wnkxYma6eGykup7PtlCIw="
+          "Value": "sha256-/nW5gFODX6zSkdjIPLRTKzKabNcshlHe7mWJVA86Gq0="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Client.pdb.gz",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-34e81ubir7.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\gabtfuurp3-6zlvhmsi8p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10708,7 +10708,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "45689"
+          "Value": "68686"
         },
         {
           "Name": "Content-Type",
@@ -10716,11 +10716,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"InAo4VIJ7gKmXRNj3/QjJuPIF0h+eUvA03TP4DsmwjA=\""
+          "Value": "\"ngCL6u5svhsZnzamW55riVnKG1zAB3FByH7/3QNJD2c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10738,7 +10738,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-InAo4VIJ7gKmXRNj3/QjJuPIF0h+eUvA03TP4DsmwjA="
+          "Value": "sha256-ngCL6u5svhsZnzamW55riVnKG1zAB3FByH7/3QNJD2c="
         }
       ]
     },
@@ -10753,7 +10753,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32768"
+          "Value": "35840"
         },
         {
           "Name": "Content-Type",
@@ -10761,11 +10761,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7AKxkHGu0Wlnf6RMVeueQztD4YvkXyymxnLSN7k7jp8=\""
+          "Value": "\"76rzgT2/GXpkTOfxtBAryK139FOr5lzwpmqI2IwOcDE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10775,18 +10775,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7AKxkHGu0Wlnf6RMVeueQztD4YvkXyymxnLSN7k7jp8="
+          "Value": "sha256-76rzgT2/GXpkTOfxtBAryK139FOr5lzwpmqI2IwOcDE="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Shared.dll",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-cwilgguueo.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-zv703gan6e.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000079214195"
+          "Quality": "0.000072170901"
         }
       ],
       "ResponseHeaders": [
@@ -10796,15 +10796,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12623"
+          "Value": "13855"
         },
         {
           "Name": "ETag",
-          "Value": "\"zYPf8QOP777Ghk2M1iOOjOTkRwZ6PBuyRVTqwvHn3G4=\""
+          "Value": "\"FG02XJYMw0kav0TYMEz+lyzDRduLtW8lfYqVCV3Hl88=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10824,19 +10824,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"7AKxkHGu0Wlnf6RMVeueQztD4YvkXyymxnLSN7k7jp8=\""
+          "Value": "W/\"76rzgT2/GXpkTOfxtBAryK139FOr5lzwpmqI2IwOcDE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7AKxkHGu0Wlnf6RMVeueQztD4YvkXyymxnLSN7k7jp8="
+          "Value": "sha256-76rzgT2/GXpkTOfxtBAryK139FOr5lzwpmqI2IwOcDE="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Shared.dll.gz",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-cwilgguueo.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\meo443wfgc-zv703gan6e.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10845,7 +10845,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12623"
+          "Value": "13855"
         },
         {
           "Name": "Content-Type",
@@ -10853,11 +10853,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"zYPf8QOP777Ghk2M1iOOjOTkRwZ6PBuyRVTqwvHn3G4=\""
+          "Value": "\"FG02XJYMw0kav0TYMEz+lyzDRduLtW8lfYqVCV3Hl88=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10875,7 +10875,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-zYPf8QOP777Ghk2M1iOOjOTkRwZ6PBuyRVTqwvHn3G4="
+          "Value": "sha256-FG02XJYMw0kav0TYMEz+lyzDRduLtW8lfYqVCV3Hl88="
         }
       ]
     },
@@ -10890,7 +10890,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "20988"
+          "Value": "22956"
         },
         {
           "Name": "Content-Type",
@@ -10898,11 +10898,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NyE1KOiTSH6HEvhHSI/lHFJtIvaacvceidtQODRG+pU=\""
+          "Value": "\"EAW9FsSD4H63ibOKt48s5M0scX6ZSjWPkZZX08mHx2M=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10912,18 +10912,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NyE1KOiTSH6HEvhHSI/lHFJtIvaacvceidtQODRG+pU="
+          "Value": "sha256-EAW9FsSD4H63ibOKt48s5M0scX6ZSjWPkZZX08mHx2M="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Shared.pdb",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-t3ofjxe7ba.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-4nza45ncuv.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000098902186"
+          "Quality": "0.000089047195"
         }
       ],
       "ResponseHeaders": [
@@ -10933,15 +10933,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10110"
+          "Value": "11229"
         },
         {
           "Name": "ETag",
-          "Value": "\"0WJ9BCXWRFsoZxruv5PvGJRgti2/Zj48cy11SM5fa0Q=\""
+          "Value": "\"oBnq8XO9+jYspEBloSRdhAu1tDpwedjWaTlPHZAZhsQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10961,19 +10961,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"NyE1KOiTSH6HEvhHSI/lHFJtIvaacvceidtQODRG+pU=\""
+          "Value": "W/\"EAW9FsSD4H63ibOKt48s5M0scX6ZSjWPkZZX08mHx2M=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NyE1KOiTSH6HEvhHSI/lHFJtIvaacvceidtQODRG+pU="
+          "Value": "sha256-EAW9FsSD4H63ibOKt48s5M0scX6ZSjWPkZZX08mHx2M="
         }
       ]
     },
     {
       "Route": "_framework/AquaparkApp.Shared.pdb.gz",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-t3ofjxe7ba.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\9jft7uavns-4nza45ncuv.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10982,7 +10982,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10110"
+          "Value": "11229"
         },
         {
           "Name": "Content-Type",
@@ -10990,11 +10990,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0WJ9BCXWRFsoZxruv5PvGJRgti2/Zj48cy11SM5fa0Q=\""
+          "Value": "\"oBnq8XO9+jYspEBloSRdhAu1tDpwedjWaTlPHZAZhsQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:36:06 GMT"
+          "Value": "Wed, 28 May 2025 20:27:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11012,7 +11012,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0WJ9BCXWRFsoZxruv5PvGJRgti2/Zj48cy11SM5fa0Q="
+          "Value": "sha256-oBnq8XO9+jYspEBloSRdhAu1tDpwedjWaTlPHZAZhsQ="
         }
       ]
     },
@@ -11309,11 +11309,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vq4yOm7cNnkjQR4uMgQnlUoU6teQtNP0xuT2dBIpUQs=\""
+          "Value": "\"ZEENCNmDRfNvzjfDA7pXWLsQZwV2LTGV2bmgjfpQfgI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 20:04:44 GMT"
+          "Value": "Wed, 28 May 2025 21:19:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11323,18 +11323,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vq4yOm7cNnkjQR4uMgQnlUoU6teQtNP0xuT2dBIpUQs="
+          "Value": "sha256-ZEENCNmDRfNvzjfDA7pXWLsQZwV2LTGV2bmgjfpQfgI="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-y7en3paail.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-cqbk5t5f9s.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000095247166"
+          "Quality": "0.000095238095"
         }
       ],
       "ResponseHeaders": [
@@ -11344,15 +11344,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10498"
+          "Value": "10499"
         },
         {
           "Name": "ETag",
-          "Value": "\"gGadR9WHj83AtJUDZM7JeGqDZS1I4bcx2/6F4uq0SW0=\""
+          "Value": "\"MWYRC7dqo3+Z2HQEPrbp5mUvJjf1sATg15ltZYmZEs4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11372,19 +11372,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"vq4yOm7cNnkjQR4uMgQnlUoU6teQtNP0xuT2dBIpUQs=\""
+          "Value": "W/\"ZEENCNmDRfNvzjfDA7pXWLsQZwV2LTGV2bmgjfpQfgI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vq4yOm7cNnkjQR4uMgQnlUoU6teQtNP0xuT2dBIpUQs="
+          "Value": "sha256-ZEENCNmDRfNvzjfDA7pXWLsQZwV2LTGV2bmgjfpQfgI="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-y7en3paail.gz",
+      "AssetFile": "D:\\aqua\\AquaparkApp\\Client\\obj\\Debug\\net7.0\\compressed\\t525bxve2y-cqbk5t5f9s.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11393,7 +11393,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10498"
+          "Value": "10499"
         },
         {
           "Name": "Content-Type",
@@ -11401,11 +11401,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gGadR9WHj83AtJUDZM7JeGqDZS1I4bcx2/6F4uq0SW0=\""
+          "Value": "\"MWYRC7dqo3+Z2HQEPrbp5mUvJjf1sATg15ltZYmZEs4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 26 May 2025 19:48:53 GMT"
+          "Value": "Wed, 28 May 2025 20:27:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11423,7 +11423,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gGadR9WHj83AtJUDZM7JeGqDZS1I4bcx2/6F4uq0SW0="
+          "Value": "sha256-MWYRC7dqo3+Z2HQEPrbp5mUvJjf1sATg15ltZYmZEs4="
         }
       ]
     },

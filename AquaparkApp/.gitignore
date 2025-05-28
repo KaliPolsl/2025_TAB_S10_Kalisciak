@@ -1,0 +1,61 @@
+## Build Results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## Visual Studio temporary files
+.vs/
+.vscode/
+*.code-workspace
+
+## Rider (JetBrains)
+.idea/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Dotnet watch & runtime
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.pdb
+*.mdb
+
+## Blazor artifacts
+wwwroot/_framework/
+Client/bin/
+Client/obj/
+Server/bin/
+Server/obj/
+Shared/bin/
+Shared/obj/
+
+## Generated compressed files
+*.gz
+*.br
+
+## Publish directory
+publish/
+dist/
+
+## .NET secrets (if used)
+**/secrets.json
+
+## Other
+*.cache
+*.tmp
+*.bak
+
+# Ignore coverage or test result folders
+coverage/
+TestResults/
+
+# Ignore launch profiles
+Properties/launchSettings.json

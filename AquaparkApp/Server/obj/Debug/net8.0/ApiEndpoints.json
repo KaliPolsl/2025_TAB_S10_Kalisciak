@@ -206,5 +206,71 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AquaparkApp.Server.Controllers.OfertaCennikowaController",
+    "Method": "GetOfertyCennikowe",
+    "RelativePath": "api/OfertaCennikowa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AquaparkApp.Shared.Models.OfertaCennikowa, AquaparkApp.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AquaparkApp.Server.Controllers.TransakcjaController",
+    "Method": "FinalizujTransakcje",
+    "RelativePath": "api/Transakcja/finalizuj",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AquaparkApp.Shared.Dtos.UtworzTransakcjeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AquaparkApp.Shared.Dtos.UtworzTransakcjeResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AquaparkApp.Server.Controllers.WizytaController",
+    "Method": "GetLiczbaAktywnychWizyt",
+    "RelativePath": "api/Wizyta/aktywne/liczba",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

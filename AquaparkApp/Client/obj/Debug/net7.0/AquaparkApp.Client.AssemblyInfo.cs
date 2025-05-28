@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AquaparkApp.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f857f92cea298d6c682d7ff533ee2a528427083")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53b58bbee543fa9d4672df796da4a391f97dfdb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("AquaparkApp.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AquaparkApp.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
