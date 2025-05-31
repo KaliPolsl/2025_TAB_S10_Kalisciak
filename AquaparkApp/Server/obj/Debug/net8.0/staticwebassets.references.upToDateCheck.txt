@@ -111,3 +111,4 @@ D:\aqua\AquaparkApp\Client\obj\Debug\net7.0\staticwebassets.build.json
 D:\aqua\AquaparkApp\Client\obj\Debug\net7.0\staticwebassets.build.json
 D:\aqua\AquaparkApp\Client\obj\Debug\net7.0\staticwebassets.build.json
 D:\aqua\AquaparkApp\Client\obj\Debug\net7.0\staticwebassets.build.json
+D:\aqua\AquaparkApp\Client\obj\Debug\net7.0\staticwebassets.build.json
